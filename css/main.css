@@ -335,7 +335,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1160px; }
+  width: 943px; }
 
 ul {
   margin: 0;
@@ -360,3 +360,28 @@ table {
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 40px;
+  z-index: 1; }
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
