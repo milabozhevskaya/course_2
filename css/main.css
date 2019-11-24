@@ -4,6 +4,12 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'lifehackmedium';
+  src: url("/fonts/lifehack_medium-webfont.woff") format("woff"), url("/fonts/lifehack_medium-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -385,6 +391,8 @@ table {
   font-family: 'gagalinregular',Helvetica,sans-serif;
   font-size: 72px;
   line-height: 1; }
+  .title--color--yellow {
+    color: #f9b43b; }
   .title--color--black {
     color: #000; }
   .title--color--white {
@@ -480,4 +488,12 @@ table {
   align-items: center; }
 
 .promo__title {
-  color: #f9b43b; }
+  color: #f9b43b;
+  padding-left: 14px; }
+
+.promo__subtitle {
+  font-family: 'lifehackmedium',Helvetica,sans-serif;
+  margin-top: 20px;
+  font-size: 65px;
+  color: #fff;
+  line-height: 1; }

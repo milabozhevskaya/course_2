@@ -62,6 +62,9 @@ table{
   line-height: 1;
 
   &--color {
+    &--yellow {
+      color: $yellow;
+    }
     &--black{
       color: $black;
     }
@@ -71,6 +74,7 @@ table{
     &--red{
       color: $red;
     }
+    
   }
   &--centred {
     text-align: center;
