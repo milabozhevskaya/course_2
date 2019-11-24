@@ -378,6 +378,9 @@ table {
   -ms-flex-align: center;
   align-items: center; }
 
+.header__nav {
+  padding-left: 69px; }
+
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -385,3 +388,34 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+
+.nav__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+  padding-right: 10px; }
+  .nav__item:before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    margin-right: 15px; }
+  .nav__item:nth-child(1):before {
+    display: none; }
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.promo {
+  height: 100vh;
+  background-image: url("../../img/bg/promo.png"); }
