@@ -361,6 +361,20 @@ table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 .header {
   position: absolute;
   width: 100%;
@@ -416,6 +430,18 @@ table {
   font-weight: 500;
   text-transform: uppercase; }
 
+.btn {
+  padding: 13px 15px;
+  border-radius: 5px;
+  background-color: #e45028;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px; }
+
 .promo {
-  height: 100vh;
-  background-image: url("../../img/bg/promo.png"); }
+  background-image: url("../../img/bg/promo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
