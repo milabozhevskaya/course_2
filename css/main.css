@@ -1,4 +1,28 @@
 @font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("/fonts/ubuntu-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("/fonts/ubuntu-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/ubuntu-light-webfont.woff2") format("woff2"), url("/fonts/ubuntu-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/ubuntu-b-webfont.woff2") format("woff2"), url("/fonts/ubuntu-b-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
   font-family: 'gagalinregular';
   src: url("/fonts/gagalin-regular-webfont.woff2") format("woff2"), url("/fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
@@ -391,13 +415,13 @@ table {
   font-family: 'gagalinregular',Helvetica,sans-serif;
   font-size: 72px;
   line-height: 1; }
-  .title--color--yellow {
+  .title--yellow {
     color: #f9b43b; }
-  .title--color--black {
+  .title--black {
     color: #000; }
-  .title--color--white {
+  .title--white {
     color: #fff; }
-  .title--color--red {
+  .title--red {
     color: #e45028; }
   .title--centred {
     text-align: center; }
@@ -451,10 +475,11 @@ table {
     display: none; }
 
 .nav__link {
+  font-family: 'Ubuntu',Helvetica,sans-serif;
+  font-weight: 500;
   text-decoration: none;
   color: #fff;
   font-size: 13px;
-  font-weight: 500;
   text-transform: uppercase; }
 
 .btn {
@@ -488,7 +513,6 @@ table {
   align-items: center; }
 
 .promo__title {
-  color: #f9b43b;
   padding-left: 14px; }
 
 .promo__subtitle {
