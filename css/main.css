@@ -383,7 +383,16 @@ table {
 
 .title {
   font-family: 'gagalinregular',Helvetica,sans-serif;
-  font-size: 72px; }
+  font-size: 72px;
+  line-height: 1; }
+  .title--color--black {
+    color: #000; }
+  .title--color--white {
+    color: #fff; }
+  .title--color--red {
+    color: #e45028; }
+  .title--centred {
+    text-align: center; }
 
 .header {
   position: absolute;
