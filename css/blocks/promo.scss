@@ -5,3 +5,18 @@
   background-position: center center;
   position: relative;
 }
+
+.promo__container {
+  height: 100%;
+  display: flex;
+
+}
+
+.promo__content {
+  display: flex;
+  align-items: center;
+}
+
+.promo__title {
+  color: $yellow;
+}

@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'gagalinregular';
+  src: url("/fonts/gagalin-regular-webfont.woff2") format("woff2"), url("/fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -375,6 +381,10 @@ table {
   -ms-flex-pack: center;
   justify-content: center; }
 
+.title {
+  font-family: 'gagalinregular',Helvetica,sans-serif;
+  font-size: 72px; }
+
 .header {
   position: absolute;
   width: 100%;
@@ -445,3 +455,20 @@ table {
   background-size: cover;
   background-position: center center;
   position: relative; }
+
+.promo__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.promo__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.promo__title {
+  color: #f9b43b; }

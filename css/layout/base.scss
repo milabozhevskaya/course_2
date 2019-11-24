@@ -55,3 +55,8 @@ table{
   flex-direction: column;
   justify-content: center;
 }
+
+.title {
+  @include gagalin();
+  font-size: 72px;
+}
