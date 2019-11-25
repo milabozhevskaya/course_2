@@ -28,3 +28,16 @@
   color: $white;
   line-height: 1;
 }
+
+.promo__scroll {
+  width: 29px;
+  height: 14px;
+  background-image: url(../../img/icons/arrow-scroll.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
