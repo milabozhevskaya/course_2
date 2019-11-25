@@ -14,7 +14,18 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 .best__title{
   align-items: center;
+  margin:0 auto;
+  }
+.best__list {
+  display:flex;
+  flex-wrap: nowrap;
+  
+}
+.best__item {
+  display: flex;
+  flex-direction: column;
 }

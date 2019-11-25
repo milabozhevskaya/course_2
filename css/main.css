@@ -423,8 +423,6 @@ table {
     color: #fff; }
   .title--red {
     color: #e45028; }
-  .title--centred {
-    text-align: center; }
 
 .header {
   position: absolute;
@@ -444,7 +442,17 @@ table {
   align-items: center; }
 
 .header__nav {
-  padding-left: 69px; }
+  padding-left: 34px; }
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
 
 .nav__list {
   display: -webkit-box;
@@ -613,12 +621,31 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 .best__title {
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin: 0 auto; }
+
+.best__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+
+.best__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .menu-fix {
   position: fixed;

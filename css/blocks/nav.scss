@@ -1,4 +1,10 @@
 
+.nav {
+  display:flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
 .nav__list {
   display:flex;
   align-items: center;
