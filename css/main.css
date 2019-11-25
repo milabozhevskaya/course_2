@@ -1,36 +1,36 @@
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("/fonts/ubuntu-regular-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("/fonts/ubuntu-medium-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu-light-webfont.woff2") format("woff2"), url("/fonts/ubuntu-light-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu-b-webfont.woff2") format("woff2"), url("/fonts/ubuntu-b-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu-b-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'gagalinregular';
-  src: url("/fonts/gagalin-regular-webfont.woff2") format("woff2"), url("/fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'lifehackmedium';
-  src: url("/fonts/lifehack_medium-webfont.woff") format("woff"), url("/fonts/lifehack_medium-webfont.woff2") format("woff2");
+  src: url("../fonts/lifehack_medium-webfont.woff") format("woff"), url("../fonts/lifehack_medium-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
@@ -503,7 +503,7 @@ table {
   font-size: 13px; }
 
 .promo {
-  background-image: url("../../img/bg/promo.png");
+  background-image: url("../img/bg/promo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -536,7 +536,7 @@ table {
 .promo__scroll {
   width: 29px;
   height: 14px;
-  background-image: url(../../img/icons/arrow-scroll.png);
+  background-image: url(../img/icons/arrow-scroll.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
@@ -602,7 +602,7 @@ table {
     margin-bottom: 17px; }
 
 .best {
-  background-image: url("../../img/bg/best.png");
+  background-image: url("../img/bg/best.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -664,7 +664,7 @@ table {
     height: 89px;
     display: block;
     margin-right: 13px;
-    background-image: url(../../img/icons/hand.png); }
+    background-image: url(../img/icons/hand.png); }
   .best__item--meat::before {
     content: "";
     background-repeat: no-repeat;
@@ -673,7 +673,7 @@ table {
     height: 89px;
     display: block;
     margin-right: 13px;
-    background-image: url(../../img/icons/meat.png); }
+    background-image: url(../img/icons/meat.png); }
   .best__item--natural::before {
     content: "";
     background-repeat: no-repeat;
@@ -682,7 +682,7 @@ table {
     height: 89px;
     display: block;
     margin-right: 13px;
-    background-image: url(../../img/icons/natural.png); }
+    background-image: url(../img/icons/natural.png); }
   .best__item h3 {
     font-family: 'lifehackmedium',Helvetica,sans-serif;
     font-size: 24px;

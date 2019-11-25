@@ -1,5 +1,5 @@
 .best {
-  background-image: url('../../img/bg/best.png');
+  background-image: url('../img/bg/best.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -43,15 +43,15 @@
   text-align: center;
   &--hand::before {
     @include beforeitem();
-    background-image: url(../../img/icons/hand.png);
+    background-image: url(../img/icons/hand.png);
   }
   &--meat::before {
     @include beforeitem();
-    background-image: url(../../img/icons/meat.png);
+    background-image: url(../img/icons/meat.png);
   }
   &--natural::before {
     @include beforeitem();
-    background-image: url(../../img/icons/natural.png);
+    background-image: url(../img/icons/natural.png);
   }
   & h3 {
     @include lifehack();
