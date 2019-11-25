@@ -12,20 +12,56 @@
 
 .best__content {
   display: flex;
-  align-items: center;
-  margin: 0 auto;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 .best__title{
   align-items: center;
   margin:0 auto;
+  margin-bottom: 55px;
   }
 .best__list {
   display:flex;
   flex-wrap: nowrap;
-  
+  justify-content: space-between;
+}
+
+@mixin beforeitem () {
+  content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 97px;
+    height: 89px;
+    display: block;  
+    margin-right: 13px;  
 }
 .best__item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 30%;
+  text-align: center;
+  &--hand::before {
+    @include beforeitem();
+    background-image: url(../../img/icons/hand.png);
+  }
+  &--meat::before {
+    @include beforeitem();
+    background-image: url(../../img/icons/meat.png);
+  }
+  &--natural::before {
+    @include beforeitem();
+    background-image: url(../../img/icons/natural.png);
+  }
+  & h3 {
+    @include lifehack();
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 13px;
+  }
+  & p {
+    @include ubuntu(light);
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
