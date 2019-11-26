@@ -1,0 +1,54 @@
+.best {
+  background-image: url('../img/bg/best.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.best__container {
+  height: 100%;
+  display: flex;
+}
+
+.best__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+.best__title{
+  align-items: center;
+  margin:0 auto;
+  margin-bottom: 50px;
+  }
+.best__list {
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.best__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  text-align: center;
+ 
+  & img {
+    width: 85px;
+    height: 80px;
+    display: block;  
+    margin-bottom: 35px;
+  }
+  & h3 {
+    @include lifehack();
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 13px;
+  }
+  & p {
+    @include ubuntu(light);
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}

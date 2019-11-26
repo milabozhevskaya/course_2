@@ -1,0 +1,43 @@
+.promo {
+  background-image: url('../img/bg/promo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.promo__container {
+  height: 100%;
+  display: flex;
+
+}
+
+.promo__content {
+  display: flex;
+  align-items: center;
+}
+
+.promo__title {
+  padding-left: 27px;
+}
+
+.promo__subtitle {
+  @include lifehack;
+  margin-top: 20px;
+  font-size: 65px;
+  color: $white;
+  line-height: 1;
+}
+
+.promo__scroll {
+  width: 29px;
+  height: 14px;
+  background-image: url(../img/icons/arrow-scroll.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}

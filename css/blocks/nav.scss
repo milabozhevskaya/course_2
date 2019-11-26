@@ -1,0 +1,42 @@
+
+.nav {
+  display:flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.nav__list {
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav__item {
+  display:flex;
+  align-items: center;
+  margin-right: 15px;
+
+  &:before {
+    content:"";
+    width: 4px;
+    height: 4px;
+    background-color: $white;
+    border-radius: 50%;
+    display: block;  
+    margin-right: 17px;  
+  }
+  &:nth-child(1) {
+    &:before{
+      display: none;
+    }
+  }
+}
+
+.nav__link {
+  @include ubuntu(medium);
+  text-decoration: none;
+  color: $white;
+  font-size: 13px;
+  line-height: 2;
+  text-transform: uppercase;
+}
