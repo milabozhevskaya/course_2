@@ -14,8 +14,7 @@
 .nav__item {
   display:flex;
   align-items: center;
-  margin-right: 13px;
-  padding-right: 10px;
+  margin-right: 15px;
 
   &:before {
     content:"";
@@ -24,7 +23,7 @@
     background-color: $white;
     border-radius: 50%;
     display: block;  
-    margin-right: 13px;  
+    margin-right: 17px;  
   }
   &:nth-child(1) {
     &:before{

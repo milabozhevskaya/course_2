@@ -426,7 +426,7 @@ table {
 .header {
   position: absolute;
   width: 100%;
-  top: 40px;
+  top: 11px;
   z-index: 1; }
 
 .header__container {
@@ -441,7 +441,7 @@ table {
   align-items: center; }
 
 .logo {
-  margin-right: 32px; }
+  margin-right: 65px; }
 
 .nav {
   display: -webkit-box;
@@ -470,8 +470,7 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 13px;
-  padding-right: 10px; }
+  margin-right: 15px; }
   .nav__item:before {
     content: "";
     width: 4px;
@@ -479,7 +478,7 @@ table {
     background-color: #fff;
     border-radius: 50%;
     display: block;
-    margin-right: 13px; }
+    margin-right: 17px; }
   .nav__item:nth-child(1):before {
     display: none; }
 
@@ -523,7 +522,7 @@ table {
   align-items: center; }
 
 .promo__title {
-  padding-left: 14px; }
+  padding-left: 27px; }
 
 .promo__subtitle {
   font-family: 'lifehackmedium',Helvetica,sans-serif;
@@ -540,7 +539,7 @@ table {
   background-size: cover;
   display: block;
   position: absolute;
-  bottom: 30px;
+  bottom: 40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -586,7 +585,7 @@ table {
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  padding-top: 50px;
+  padding-top: 47px;
   padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 33px;
@@ -594,11 +593,11 @@ table {
   -o-transition: opacity .7s;
   transition: opacity .7s; }
   .reviews__text div {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     font-family: 'gagalinregular',Helvetica,sans-serif;
     text-transform: uppercase; }
   .reviews__text p {
-    margin-bottom: 17px; }
+    margin-bottom: 12px; }
 
 .best {
   background-image: url("../img/bg/best.png");
@@ -623,14 +622,15 @@ table {
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding-bottom: 25px; }
 
 .best__title {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
-  margin-bottom: 55px; }
+  margin-bottom: 50px; }
 
 .best__list {
   display: -webkit-box;
@@ -656,10 +656,10 @@ table {
   width: 30%;
   text-align: center; }
   .best__item img {
-    width: 97px;
-    height: 89px;
+    width: 85px;
+    height: 80px;
     display: block;
-    margin-bottom: 13px; }
+    margin-bottom: 35px; }
   .best__item h3 {
     font-family: 'lifehackmedium',Helvetica,sans-serif;
     font-size: 24px;
@@ -674,7 +674,7 @@ table {
 .menu-fix {
   position: fixed;
   top: 91px;
-  right: 50px;
+  right: 51px;
   z-index: 2; }
 
 .menu-fix__dat {
@@ -683,7 +683,7 @@ table {
   width: 16px;
   border-radius: 50%;
   border: 1px solid transparent;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   position: relative; }
   .menu-fix__dat--active {
     border-color: #fff; }

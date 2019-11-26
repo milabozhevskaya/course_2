@@ -36,17 +36,17 @@
   bottom: 0;
   right: 0;
   background-color: rgba($black,.6);
-  padding-top: 50px;
+  padding-top: 47px;
   padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 33px;
   transition: opacity .7s;
   & div {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     @include gagalin();
     text-transform: uppercase;
   }
   & p {
-    margin-bottom: 17px;
+    margin-bottom: 12px;
   }
 }
