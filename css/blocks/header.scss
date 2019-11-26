@@ -1,7 +1,7 @@
 .header {
   position: absolute;
   width: 100%;
-  padding-top: 40px;
+  top: 40px;
   z-index: 1;
 }
 
@@ -9,8 +9,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header__nav {
-  padding-left: 34px;
 }
