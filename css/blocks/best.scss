@@ -26,32 +26,18 @@
   justify-content: space-between;
 }
 
-@mixin beforeitem () {
-  content: "";
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 97px;
-    height: 89px;
-    display: block;  
-    margin-right: 13px;  
-}
 .best__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 30%;
   text-align: center;
-  &--hand::before {
-    @include beforeitem();
-    background-image: url(../img/icons/hand.png);
-  }
-  &--meat::before {
-    @include beforeitem();
-    background-image: url(../img/icons/meat.png);
-  }
-  &--natural::before {
-    @include beforeitem();
-    background-image: url(../img/icons/natural.png);
+ 
+  & img {
+    width: 97px;
+    height: 89px;
+    display: block;  
+    margin-bottom: 13px;
   }
   & h3 {
     @include lifehack();

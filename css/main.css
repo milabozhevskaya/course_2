@@ -653,33 +653,11 @@ table {
   align-items: center;
   width: 30%;
   text-align: center; }
-  .best__item--hand::before {
-    content: "";
-    background-repeat: no-repeat;
-    background-position: center;
+  .best__item img {
     width: 97px;
     height: 89px;
     display: block;
-    margin-right: 13px;
-    background-image: url(../img/icons/hand.png); }
-  .best__item--meat::before {
-    content: "";
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 97px;
-    height: 89px;
-    display: block;
-    margin-right: 13px;
-    background-image: url(../img/icons/meat.png); }
-  .best__item--natural::before {
-    content: "";
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 97px;
-    height: 89px;
-    display: block;
-    margin-right: 13px;
-    background-image: url(../img/icons/natural.png); }
+    margin-bottom: 13px; }
   .best__item h3 {
     font-family: 'lifehackmedium',Helvetica,sans-serif;
     font-size: 24px;
