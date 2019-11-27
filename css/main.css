@@ -545,6 +545,50 @@ table {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
 
+.team {
+  height: 100vh;
+  min-height: 650px;
+  background-image: url("../img/bg/team.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
+
+.team__container {
+  background-color: #2f3234;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%; }
+
+.team__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 113px;
+  padding-left: 97px;
+  padding-right: 98px; }
+
+.team__title {
+  margin-bottom: 46px; }
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
 .reviews__list {
   height: 100%;
   display: -webkit-box;
