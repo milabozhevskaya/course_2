@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+width="9" height="7" viewBox="0 0 9 7">
+  <defs>
+    <style>
+      .down {
+        fill: #f9b43b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="poligon" data-name="down" class="down" d="M662.506,2453.3l-4.5-6h9Z" />
+</svg>
+
