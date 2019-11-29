@@ -1,0 +1,114 @@
+.menu {
+  height: 100vh;
+  min-height: 650px;
+  background-image: url('../img/bg/menu.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.menu__container {
+  background-color:rgba($color: $gray, $alpha: .9);
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  left: 50%;
+}
+
+.menu__content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 113px;
+  padding-left: 97px;
+  padding-right: 98px;
+}
+
+
+.team__title {
+  margin-bottom: 46px;
+  }
+
+  
+.team__list {
+  display:flex;
+  flex-direction: column;
+}
+
+.team__item {
+  margin-bottom: 25px;
+
+  &--active {
+    & .team__desc {
+        height: 100%;
+    }
+  }
+}
+
+.team__name {
+  @include gagalin();
+  line-height: 2;
+  text-align: left;
+  font-size: 14px;
+  color: $white;
+  margin-bottom: 15px;
+ /* &::before {
+    display: block;
+    content: ' ';
+    background-image: url('../img/icons/down.svg');
+    background-size: 28px 28px;
+    height: 28px;
+    width: 28px;
+  }*/
+  
+
+ /* &::before {
+   content: ' ';
+   width: 0;
+   height: 0;
+   border: 40px solid transparent;
+   border-bottom-color: $yellow;
+  border-top: 0;
+  }*/
+
+}
+
+.team__desc {
+  display: flex;
+  justify-content: flex-start;
+  height: 0;
+  overflow: hidden;
+  
+}
+
+.team__photo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 21px;
+    flex-shrink: 0;
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.team__info {
+  @include ubuntu(bold);
+  color: $white;
+  line-height: 1.71;
+  font-size: 14px;
+
+  & div {
+    margin-bottom: 10px;
+  }
+
+  & p {
+    @include ubuntu(light);
+  }
+}
