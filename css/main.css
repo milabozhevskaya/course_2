@@ -665,15 +665,11 @@ table {
   position: relative; }
 
 .menu__container {
-  background-color: rgba(47, 50, 52, 0.9);
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  left: 50%; }
+  height: 100%;
+  width: 100%; }
 
 .menu__content {
   display: -webkit-box;
@@ -682,35 +678,65 @@ table {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
-  flex-direction: row;
-  padding-top: 113px;
-  padding-left: 97px;
-  padding-right: 98px; }
+  flex-direction: row; }
 
-.team__title {
-  margin-bottom: 46px; }
+.menu__title {
+  position: absolute;
+  top: 15%;
+  left: 10%; }
 
-.team__list {
+.menu__ack {
+  position: absolute;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  height: 100%;
+  right: 0; }
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 100%; }
 
-.team__item {
-  margin-bottom: 25px; }
-  .team__item--active .team__desc {
-    height: 100%; }
+.menu__item {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  .menu__item--active .menu__name {
+    color: #f9b43b; }
+  .menu__item--active .menu__desc {
+    width: 50%;
+    padding-left: 30px;
+    padding-right: 33px; }
 
-.team__name {
+.menu__name {
   font-family: 'gagalinregular',Helvetica,sans-serif;
   line-height: 2;
-  text-align: left;
-  font-size: 14px;
-  color: #fff;
-  margin-bottom: 15px;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  direction: ltr;
+  text-orientation: sideways-left;
+  background-size: cover;
+  position: relative;
+  z-index: 3;
   /* &::before {
     display: block;
     content: ' ';
@@ -727,43 +753,39 @@ table {
    border-bottom-color: $yellow;
   border-top: 0;
   }*/ }
+  .menu__name:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -2; }
+  .menu__name--meat {
+    background-image: url("../img/bg/bg-meat.png");
+    background-position: center; }
+  .menu__name--vegan {
+    background-image: url("../img/bg/bg-vegan.png");
+    background-position-x: 90%; }
+  .menu__name--diet {
+    background-image: url("../img/bg/bg-diet.png");
+    background-position: right; }
 
-.team__desc {
+.menu__desc {
+  font-family: 'Ubuntu',Helvetica,sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.71;
+  background-color: rgba(47, 50, 52, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  height: 0;
+  width: 0;
+  padding-top: 67px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden; }
-
-.team__photo {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 21px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0; }
-  .team__photo img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover; }
-
-.team__info {
-  font-family: 'Ubuntu',Helvetica,sans-serif;
-  font-weight: bold;
-  color: #fff;
-  line-height: 1.71;
-  font-size: 14px; }
-  .team__info div {
-    margin-bottom: 10px; }
-  .team__info p {
-    font-family: 'Ubuntu',Helvetica,sans-serif;
-    font-weight: 300; }
 
 .reviews__list {
   height: 100%;

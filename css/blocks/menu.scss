@@ -9,51 +9,101 @@
 }
 
 .menu__container {
-  background-color:rgba($color: $gray, $alpha: .9);
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  z-index: 1;
   display: flex;
-  left: 50%;
+  height: 100%;
+  width: 100%;
+ 
 }
 
 .menu__content {
   display: flex;
   flex-direction: row;
-  padding-top: 113px;
-  padding-left: 97px;
-  padding-right: 98px;
+  
 }
 
-
-.team__title {
-  margin-bottom: 46px;
+.menu__title {
+  position: absolute;
+  top: 15%;
+  left: 10%;
   }
+.menu__ack {
+ 
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  height: 100%;
+  right: 0;
+}
+
 
   
-.team__list {
+.menu__list {
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 100%;
 }
 
-.team__item {
-  margin-bottom: 25px;
-
+.menu__item {
+  color: $white;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
   &--active {
-    & .team__desc {
-        height: 100%;
+    & .menu__name {
+      color: $yellow;
+    }
+    & .menu__desc {
+        width: 50%;
+        padding-left: 30px;
+        padding-right: 33px;
     }
   }
 }
 
-.team__name {
+.menu__name {
   @include gagalin();
   line-height: 2;
-  text-align: left;
-  font-size: 14px;
-  color: $white;
-  margin-bottom: 15px;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  direction: ltr;  
+  text-orientation: sideways-left;
+  background-size: cover;
+  position: relative;
+  z-index: 3;
+   
+ &:before {
+   content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: rgba($color: $black, $alpha: .5);
+ z-index: -2;
+ }
+
+  &--meat {
+
+    background-image:  url("../img/bg/bg-meat.png");
+    background-position: center;
+    
+  }
+
+  &--vegan {
+    background-image: url("../img/bg/bg-vegan.png");
+    background-position-x:  90%;
+   
+    
+  }
+
+  &--diet {
+    background-image: url("../img/bg/bg-diet.png");
+    background-position: right;
+    
+  }
+ 
  /* &::before {
     display: block;
     content: ' ';
@@ -75,40 +125,15 @@
 
 }
 
-.team__desc {
-  display: flex;
-  justify-content: flex-start;
-  height: 0;
-  overflow: hidden;
-  
-}
-
-.team__photo {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 21px;
-    flex-shrink: 0;
-  & img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.team__info {
-  @include ubuntu(bold);
-  color: $white;
-  line-height: 1.71;
+.menu__desc {
+  @include ubuntu(light);
   font-size: 14px;
-
-  & div {
-    margin-bottom: 10px;
-  }
-
-  & p {
-    @include ubuntu(light);
-  }
+  line-height: 1.71;
+  background-color: rgba($color: $gray, $alpha: .9);
+  display: flex;
+  width: 0;
+  padding-top: 67px;
+  box-sizing: border-box;
+  overflow: hidden;
+ 
 }
