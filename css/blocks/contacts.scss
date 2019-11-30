@@ -14,5 +14,6 @@
   & a {
     @include ubuntu(bold);
     color: $reddark;
+    text-decoration: none;
   }
 }

@@ -49,4 +49,10 @@
   & p {
     margin-bottom: 12px;
   }
+  & .btn {
+    transition: .4s;
+    &:hover {
+    background-color: $graydark;
+  }
+}
 }

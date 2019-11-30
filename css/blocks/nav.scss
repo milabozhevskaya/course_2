@@ -39,4 +39,18 @@
   font-size: 13px;
   line-height: 2;
   text-transform: uppercase;
+  
+
+  &:hover {
+    text-decoration: underline;;
+  }
+}
+
+.nav__btn {
+  & .btn {
+    transition: .4s;
+    &:hover {
+      background-color: $reddark;
+    }
+  }
 }

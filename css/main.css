@@ -490,6 +490,15 @@ table {
   font-size: 13px;
   line-height: 2;
   text-transform: uppercase; }
+  .nav__link:hover {
+    text-decoration: underline; }
+
+.nav__btn .btn {
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s; }
+  .nav__btn .btn:hover {
+    background-color: #c1401e; }
 
 .btn {
   padding: 13px 15px;
@@ -842,6 +851,12 @@ table {
     text-transform: uppercase; }
   .reviews__text p {
     margin-bottom: 12px; }
+  .reviews__text .btn {
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s; }
+    .reviews__text .btn:hover {
+      background-color: #2f3234; }
 
 .best {
   background-image: url("../img/bg/best.png");
@@ -965,7 +980,8 @@ table {
   .contacts a {
     font-family: 'Ubuntu',Helvetica,sans-serif;
     font-weight: bold;
-    color: #c1401e; }
+    color: #c1401e;
+    text-decoration: none; }
 
 .netw {
   display: -webkit-box;
