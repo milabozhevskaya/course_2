@@ -1,12 +1,6 @@
-$white: #fff;
-$black: #000;
-$red: #e45028;
-$reddark: #c1401e;
-$yellow: #f9b43b;
-$gray: #2f3234;
-$style: normal;
 
 @import "layout/font.scss";
+@import "layout/variables.scss";
 @import "layout/normalize.scss";
 @import "layout/base.scss";
 @import "blocks/header.scss";
@@ -18,4 +12,8 @@ $style: normal;
 @import "blocks/menu.scss";
 @import "blocks/reviews.scss";
 @import "blocks/best.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/contacts.scss";
+@import "blocks/netw.scss";
 @import "blocks/menu-fix.scss";
