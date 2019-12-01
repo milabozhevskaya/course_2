@@ -1,0 +1,56 @@
+.logo-icon {
+  width: 92px;
+  height: 69px;
+}
+
+.arrow-scroll-icon {
+  width: 29px;
+  height: 14px;
+}
+
+.meat-icon {
+  width: 97px;
+  height: 89px;
+}
+
+.heand-icon {
+  width: 73px;
+  height: 85px;
+}
+
+.natural-icon {
+  width: 88px;
+  height: 75px;
+}
+
+.map-marker-icon {
+  position: absolute;
+  width: 46px;
+  height: 57px;
+
+  &--bol {
+    top: 175px;
+    left: 524px;
+  }
+
+  &--nev {
+    top: 280px;
+    left: 660px;
+  }
+
+  &--cudr {
+    top: 398px;
+    left: 878px;
+  }
+
+  &--mosk {
+    top: 500px;
+    left: 529px;
+  }
+}
+
+.phone-icon {
+  width: 12px;
+  height: 11px;
+  margin-right: 3px;
+}

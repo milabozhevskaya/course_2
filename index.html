@@ -11,7 +11,9 @@
   <div class="wrapper">
     <header class="header">
       <div class="container header__container">
-        <img src="img/icons/logo.png" alt="логотип" class="logo">
+       <svg class="logo-icon">
+         <use xlink:href="img/icons/sprite.svg#logo"></use>
+       </svg>
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
@@ -52,7 +54,11 @@
             <div class="promo__subtitle">натуральные бургеры</div>
           </h1>
         </div>
-        <a href="#" class="promo__scroll" aria-label="Прокрутить на следующую секцию"></a>
+        <a href="#" class="promo__scroll" aria-label="Прокрутить на следующую секцию">
+          <svg class="arrow-scroll-icon">
+            <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
+          </svg>
+        </a>
   
       </div>
   
@@ -65,21 +71,27 @@
           </div>
           <ul class="best__list">
             <li class="best__item">
-              <img src="img/icons/meat.png"  alt="Картинка мяса">
+              <svg class="meat-icon">
+                <use xlink:href="img/icons/sprite.svg#meat"></use>
+              </svg>
               <h3>100% свежее мясо</h3>
               <p>
                 Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
               </p>
             </li>
             <li class="best__item">
-              <img src="img/icons/hand.png" alt="Картинка руки">
+                <svg class="heand-icon">
+                    <use xlink:href="img/icons/sprite.svg#heand"></use>
+                  </svg>
               <h3>Ручная сборка</h3>
               <p>
                 Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
               </p>
             </li>
             <li class="best__item">
-              <img src="img/icons/natural.png" alt="Картинка листочка">
+                <svg class="natural-icon">
+                    <use xlink:href="img/icons/sprite.svg#natural"></use>
+                  </svg>
               <h3>Натуральные ингредиенты</h3>
               <p>
                 Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
@@ -273,13 +285,30 @@
       </ul>
     </div>
     <div class="section map">
+        <svg class="map-marker-icon map-marker-icon--bol">
+          <use xlink:href="img/icons/sprite.svg#map-marker"></use>
+        </svg>
+        <svg class="map-marker-icon map-marker-icon--nev">
+          <use xlink:href="img/icons/sprite.svg#map-marker"></use>
+        </svg>
+        <svg class="map-marker-icon map-marker-icon--cudr">
+          <use xlink:href="img/icons/sprite.svg#map-marker"></use>
+        </svg>
+        <svg class="map-marker-icon map-marker-icon--mosk">
+          <use xlink:href="img/icons/sprite.svg#map-marker"></use>
+        </svg>
         <footer class="footer">
             <div class="container footer__container">
               <div class="contacts">
                 <span class="addres">
                   Санкт-Петербург,ул.Бабушкина,д.12/1,15
                 </span>
-                <a href="tel:+78123771377" class="phone">+7(812)377-13-77</a>
+                <div class="phone">
+                  <svg class="phone-icon">
+                    <use xlink:href="img/icons/sprite.svg#phone"></use>
+                  </svg>
+                  <a href="tel:+78123771377" class="phone__number">+7(812)377-13-77</a>
+                </div>
               </div>  
               <div class="netw">
                 

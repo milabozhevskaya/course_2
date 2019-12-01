@@ -423,6 +423,48 @@ table {
   .title--red {
     color: #e45028; }
 
+.logo-icon {
+  width: 92px;
+  height: 69px; }
+
+.arrow-scroll-icon {
+  width: 29px;
+  height: 14px; }
+
+.meat-icon {
+  width: 97px;
+  height: 89px; }
+
+.heand-icon {
+  width: 73px;
+  height: 85px; }
+
+.natural-icon {
+  width: 88px;
+  height: 75px; }
+
+.map-marker-icon {
+  position: absolute;
+  width: 46px;
+  height: 57px; }
+  .map-marker-icon--bol {
+    top: 175px;
+    left: 524px; }
+  .map-marker-icon--nev {
+    top: 280px;
+    left: 660px; }
+  .map-marker-icon--cudr {
+    top: 398px;
+    left: 878px; }
+  .map-marker-icon--mosk {
+    top: 500px;
+    left: 529px; }
+
+.phone-icon {
+  width: 12px;
+  height: 11px;
+  margin-right: 3px; }
+
 .header {
   position: absolute;
   width: 100%;
@@ -541,11 +583,11 @@ table {
   line-height: 1; }
 
 .promo__scroll {
-  width: 29px;
+  /*width: 29px;
   height: 14px;
   background-image: url(../img/icons/arrow-scroll.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
   display: block;
   position: absolute;
   bottom: 40px;
@@ -914,9 +956,7 @@ table {
   align-items: center;
   width: 30%;
   text-align: center; }
-  .best__item img {
-    width: 85px;
-    height: 80px;
+  .best__item svg {
     display: block;
     margin-bottom: 35px; }
   .best__item h3 {
