@@ -465,6 +465,22 @@ table {
   height: 11px;
   margin-right: 3px; }
 
+.netw-icon {
+  width: 20px;
+  height: 20px;
+  opacity: .4;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .netw-icon--vk {
+    width: 23px;
+    height: 13px; }
+  .netw-icon--tw {
+    width: 20px;
+    height: 16px; }
+  .netw-icon:hover {
+    opacity: 1; }
+
 .header {
   position: absolute;
   width: 100%;
@@ -1031,6 +1047,29 @@ table {
   -ms-flex-pack: end;
   justify-content: flex-end;
   width: 50%; }
+  .network__ref {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .network__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    position: relative; }
+  .network__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 20px; }
+    .network__item:last-child {
+      margin-right: 0; }
 
 .menu-fix {
   position: fixed;

@@ -3,4 +3,24 @@
  display: flex;
  justify-content: flex-end;
   width: 50%;
+
+  &__ref {
+    align-items: center;
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

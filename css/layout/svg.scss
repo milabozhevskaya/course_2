@@ -55,3 +55,22 @@
   margin-right: 3px;
 }
 
+.netw-icon {
+  width: 20px;
+  height: 20px;
+  opacity: .4;
+  transition: .5s;
+  &--vk {
+    width: 23px;
+    height: 13px;
+  }
+
+  &--tw {
+    width: 20px;
+    height: 16px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
