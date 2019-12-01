@@ -662,6 +662,10 @@ table {
     height: 100%; }
   .team__item--active .team__name {
     color: #f9b43b; }
+    .team__item--active .team__name::before {
+      border: 8px solid transparent;
+      border-bottom-color: #f9b43b;
+      border-top: 0; }
 
 .team__name {
   font-family: 'gagalinregular',Helvetica,sans-serif;
@@ -670,6 +674,8 @@ table {
   font-size: 14px;
   color: #fff;
   margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
   /* &::before {
     display: block;
     content: ' ';
@@ -686,6 +692,19 @@ table {
    border-bottom-color: $yellow;
   border-top: 0;
   }*/ }
+  .team__name::before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
 
 .team__desc {
   display: -webkit-box;

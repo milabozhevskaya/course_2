@@ -46,6 +46,11 @@
     }
     & .team__name {
       color: $yellow;
+      &::before {
+        border: 8px solid transparent;
+        border-bottom-color: $yellow;
+        border-top: 0;
+      }
   }
   }
 }
@@ -57,7 +62,21 @@
   font-size: 14px;
   color: $white;
   margin-bottom: 15px;
-  
+  position: relative;
+  padding-left: 30px;
+  &::before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: $yellow;
+    border-bottom: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    
+  }
 
 
  /* &::before {
