@@ -1,73 +1,73 @@
 .logo-icon {
-  width: 92px;
-  height: 69px;
+  width: rem(92px);
+  height: rem(69px);
 }
 
 .arrow-scroll-icon {
-  width: 29px;
-  height: 14px;
+  width: rem(29px);
+  height: rem(14px);
 }
 
 .meat-icon {
-  width: 97px;
-  height: 89px;
+  width: rem(97px);
+  height: rem(89px);
 }
 
 .heand-icon {
-  width: 73px;
-  height: 85px;
+  width: rem(73px);
+  height: rem(85px);
 }
 
 .natural-icon {
-  width: 88px;
-  height: 75px;
+  width: rem(88px);
+  height: rem(75px);
 }
 
 .map-marker-icon {
   position: absolute;
-  width: 46px;
-  height: 57px;
+  width: rem(46px);
+  height: rem(57px);
 
   &--bol {
-    top: 175px;
-    left: 524px;
+    top: rem(175px);
+    left: rem(524px);
   }
 
   &--nev {
-    top: 280px;
-    left: 660px;
+    top: rem(280px);
+    left: rem(660px);
   }
 
   &--cudr {
-    top: 398px;
-    left: 878px;
+    top: rem(398px);
+    left: rem(878px);
   }
 
   &--mosk {
-    top: 500px;
-    left: 529px;
+    top: rem(500px);
+    left: rem(529px);
   }
 }
 
 .phone-icon {
-  width: 12px;
-  height: 11px;
-  margin-right: 3px;
+  width: rem(12px);
+  height: rem(11px);
+  margin-right: rem(3px);
 }
 
 .netw-icon {
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
   opacity: .4;
   transition: .5s;
   &--vk {
-    width: 23px;
-    height: 13px;
+    width: rem(23px);
+    height: rem(13px);
   }
 
   &--tw {
-    width: 20px;
-    height: 16px;
+    width: rem(20px);
+    height: rem(16px);
   }
 
   &:hover {

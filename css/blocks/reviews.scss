@@ -26,7 +26,7 @@
 .reviews__text {
   opacity: 0;
   @include ubuntu (light);
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.7;
   text-align: left;
   color: $white;
@@ -36,18 +36,18 @@
   bottom: 0;
   right: 0;
   background-color: rgba($black,.6);
-  padding-top: 47px;
-  padding-bottom: 50px;
-  padding-left: 20px;
-  padding-right: 33px;
+  padding-top: rem(47px);
+  padding-bottom: rem(50px);
+  padding-left: rem(20px);
+  padding-right: rem(33px);
   transition: opacity .7s;
   & div {
-    margin-bottom: 16px;
+    margin-bottom: rem(16px);
     @include gagalin();
     text-transform: uppercase;
   }
   & p {
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
   }
   & .btn {
     transition: .4s;

@@ -14,12 +14,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 25px;
+  padding-bottom: rem(25px);
 }
 .best__title{
   align-items: center;
   margin:0 auto;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
   }
 .best__list {
   display:flex;
@@ -36,17 +36,17 @@
  
   & svg {
     display: block;  
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
   }
   & h3 {
     @include lifehack();
-    font-size: 24px;
+    font-size: rem(24px);
     line-height: 1.17;
-    margin-bottom: 13px;
+    margin-bottom: rem(13px);
   }
   & p {
     @include ubuntu(light);
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1.71;
   }
 }

@@ -1,6 +1,6 @@
 .team {
   height: 100vh;
-  min-height: 650px;
+  min-height: 100%;
   background-image: url('../img/bg/team.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,14 +21,14 @@
 .team__content {
   display: flex;
   flex-direction: column;;
-  padding-top: 113px;
-  padding-left: 97px;
-  padding-right: 98px;
+  padding-top: rem(113px);
+  padding-left: rem(97px);
+  padding-right: rem(98px);
 }
 
 
 .team__title {
-  margin-bottom: 46px;
+  margin-bottom: rem(46px);
   }
 
   
@@ -38,7 +38,7 @@
 }
 
 .team__item {
-  margin-bottom: 25px;
+  margin-bottom: rem(25px);
 
   &--active {
     & .team__desc {
@@ -47,7 +47,7 @@
     & .team__name {
       color: $yellow;
       &::before {
-        border: 8px solid transparent;
+        border: rem(8px) solid transparent;
         border-bottom-color: $yellow;
         border-top: 0;
       }
@@ -59,16 +59,16 @@
   @include gagalin();
   line-height: 2;
   text-align: left;
-  font-size: 14px;
+  font-size: rem(14px);
   color: $white;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
   position: relative;
-  padding-left: 30px;
+  padding-left: rem(30px);
   &::before {
     content: ' ';
     width: 0;
     height: 0;
-    border: 8px solid transparent;
+    border: rem(8px) solid transparent;
     border-top-color: $yellow;
     border-bottom: 0;
     position: absolute;
@@ -83,9 +83,9 @@
     display: block;
     content: ' ';
     background-image: url('../img/icons/down.svg');
-    background-size: 28px 28px;
-    height: 28px;
-    width: 28px;
+    background-size: rem(28px) rem(28px);
+    height: rem(28px);
+    width: rem(28px);
   }*/
   
 
@@ -93,7 +93,7 @@
    content: ' ';
    width: 0;
    height: 0;
-   border: 40px solid transparent;
+   border: rem(40px) solid transparent;
    border-bottom-color: $yellow;
   border-top: 0;
   }*/
@@ -109,11 +109,11 @@
 }
 
 .team__photo {
-    height: 100px;
-    width: 100px;
+    height: rem(100px);
+    width: rem(100px);
     border-radius: 50%;
     overflow: hidden;
-    margin-right: 21px;
+    margin-right: rem(21px);
     flex-shrink: 0;
   & img {
     display: block;
@@ -127,10 +127,10 @@
   @include ubuntu(bold);
   color: $white;
   line-height: 1.71;
-  font-size: 14px;
+  font-size: rem(14px);
 
   & div {
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
   }
 
   & p {

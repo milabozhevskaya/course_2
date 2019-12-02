@@ -14,16 +14,16 @@
 .nav__item {
   display:flex;
   align-items: center;
-  margin-right: 15px;
+  margin-right: rem(15px);
 
   &:before {
     content:"";
-    width: 4px;
-    height: 4px;
+    width: rem(4px);
+    height: rem(4px);
     background-color: $white;
     border-radius: 50%;
     display: block;  
-    margin-right: 17px;  
+    margin-right: rem(17px);  
   }
   &:nth-child(1) {
     &:before{
@@ -36,7 +36,7 @@
   @include ubuntu(medium);
   text-decoration: none;
   color: $white;
-  font-size: 13px;
+  font-size: rem(13px);
   line-height: 2;
   text-transform: uppercase;
   

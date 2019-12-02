@@ -1,11 +1,12 @@
 html,body{
   height: 100%;
+  font-size: rem(16px);
 }
 p{
   margin: 0;
 }
 body{
-  margin: 0px;
+  margin: rem(0px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -20,7 +21,8 @@ body{
 
 .container{
   margin: 0 auto;
-  width: 943px;
+  // width: rem(943px);
+  width: 95%;
 }
 
 ul{
@@ -48,7 +50,7 @@ table{
 }
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 100%;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +58,7 @@ table{
 
 .title {
   @include gagalin();
-  font-size: 72px;
+  font-size: rem(72px);
   line-height: 1;
   &--yellow {
     color: $yellow;

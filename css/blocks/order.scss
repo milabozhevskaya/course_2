@@ -1,6 +1,6 @@
 .order {
   height: 100vh;
-  min-height: 650px;
+  min-height: 100%;
   background-image: url('../img/bg/order.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,7 +26,7 @@
   }
 }
 .order__title {
-  margin-bottom: 44px;
+  margin-bottom: rem(44px);
 
 }
 .order__form {

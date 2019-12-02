@@ -12,7 +12,7 @@
 .form__col {
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
+  margin-right: rem(20px);
   width: 50%;
 
   &:last-child {
@@ -21,21 +21,21 @@
 }
 .form__row {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
   flex-direction: row;
   flex-wrap: nowrap;
 }
 
 .form__block {
   flex: 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
   width: 100%;
   @include ubuntu(light);
-  font-size: 14px;
+  font-size: rem(14px);
   color: $white;
 
   &:last-child {
-    margin-right: 0px;
+    margin-right: rem(0px);
   }
 }
 
@@ -43,8 +43,8 @@
 .form__input {
   width: 100%;
   background: $white;
-  border-radius: 5px;
-  border: 2px solid transparent;
+  border-radius: rem(5px);
+  border: rem(2px) solid transparent;
   outline: none;
 
   &:focus {
@@ -60,10 +60,10 @@
 
 
 .form__input--textarea{
-  height: 90px;
+  height: rem(90px);
   resize: vertical;
   width: 107%;
-  border: 1px solid transparent;
+  border: rem(1px) solid transparent;
   outline: none;
   &:focus{
     border-color: $yellow;
@@ -88,10 +88,10 @@
  .choose__answer::before{
   content: "";
   flex-shrink: 0;
-  margin-right: 5px;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #c9c9c9;
+  margin-right: rem(5px);
+  width: rem(20px);
+  height: rem(20px);
+  border: rem(1px) solid #c9c9c9;
   border-radius: 50%;
   
 }
@@ -101,8 +101,8 @@
   display: none;
   left: 15%;
   top: 32%;
-  width: 9px;
-  height: 9px;
+  width: rem(9px);
+  height: rem(9px);
   background-color: #f89513;
   border-radius: 50%;
   
@@ -134,10 +134,10 @@ label:last-child .choose__answer{
 .form__buttons button{
   background: #131415;
   color: white;
-  border-radius: 4px;
-  width: 123px;
-  height: 48px;
-  font-size: 12px;
+  border-radius: rem(4px);
+  width: rem(123px);
+  height: rem(48px);
+  font-size: rem(12px);
   font-weight: bold;
   transition: .3s;
 }
