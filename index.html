@@ -295,19 +295,76 @@
       </ul>
     </div>
     <section class="section order">
-      <h2 class="title order__title"></h2>
-      <form action="" class="form">
-        <div class="form__col">
-          <div class="form__row">
-            <label class="form__label">
-              
-            </label>
-          </div>
-          <div class="form__row"></div>
-          <div class="form__row"></div>
-        </div>
-        <div class="form__col"></div>
-      </form>
+      <h2 class="title title--yellow order__title">закажите доставку</h2>
+      <div class="order-form">
+        <form metod="get" action="" enctype="" class="form__elem">
+          
+              <div class="form__row">
+                <label class="form__block">
+                    <div class="form__title">Имя</div>
+                    <input type="text" name="" class="form__input">
+                </label>
+                <label class="form__block">
+                    <div class="form__title">Телефоен</div>
+                    <input type="tel" class="form__input">
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__block">
+                    <div class="form__title">Улица</div>
+                    <input type="text" class="form__input">
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__block">
+                    <div class="form__title">Дом</div>
+                    <input type="text" class="form__input">
+                </label>
+                <label class="form__block">
+                    <div class="form__title">Корпус</div>
+                    <input type="text" class="form__input">
+                </label>
+                <label class="form__block">
+                    <div class="form__title">Квартира</div>
+                    <input type="text" class="form__input">
+                </label>
+                <label class="form__block">
+                    <div class="form__title">Этаж</div>
+                    <input type="text" class="form__input">
+                </label>
+              </div>
+           
+            <div class="form__col">
+              <div class="form__row">
+                <label class="form__block">
+                  <div class="form__block-title">Текст отзыва</div>
+                  <textarea name="" class="form__input form__input--textarea"></textarea>
+                </label>
+              </div>
+              <div class="form__row form__buttomline">
+                <label>
+                  <input type="radio" name="radio-yes-no" class="choose__radio">
+                <div class="choose__answer">Потребуется сдача</div>
+                </label>
+                <label>
+                  <input type="radio" name="radio-yes-no" class="choose__radio">
+                  <div class="choose__answer">Оплата по карте</div>
+                </label>
+              </div>
+              <div class="form__row form__buttomline">
+                <label>
+                  <input type="radio" name="radio-yes-no" class="choose__radio">
+                <div class="choose__answer">Да</div>
+               </div>
+
+                <div class="form__row form__buttons">
+                  <button class="butreset" type="reset">ОЧИСТИТЬ</button>
+                  <button class="butsubmit" type="submit">ОТПРАВИТЬ</button>
+                </div>
+              </div>
+          
+        </form>
+      </div>
     </section>
     <div class="section map">
         <svg class="map-marker-icon map-marker-icon--bol">

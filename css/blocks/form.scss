@@ -1,0 +1,147 @@
+.form__elem {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form__col {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  width: 50%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.form__row {
+  display: flex;
+  margin-bottom: 15px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.form__block {
+  flex: 1;
+  margin-right: 20px;
+  width: 100%;
+  @include ubuntu(light);
+  font-size: 14px;
+  color: $white;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+
+.form__input {
+  width: 100%;
+  background: $white;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  outline: none;
+
+  &:focus {
+    border-color: $yellow;
+  }
+}
+
+.choose__answer {
+  position: relative;
+  display: flex;
+  color: $white;
+}
+
+
+.form__input--textarea{
+  height: 90px;
+  resize: vertical;
+  width: 107%;
+  border: 1px solid transparent;
+  outline: none;
+  &:focus{
+    border-color: $yellow;
+  }
+ }
+ 
+ .form__buttomline {
+
+  & label {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+ }
+ .choose__radio:checked ~ .choose__answer {
+  color: #f89513;
+}
+.choose__radio{
+  display: none;
+}
+
+
+ .choose__answer::before{
+  content: "";
+  flex-shrink: 0;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #c9c9c9;
+  border-radius: 50%;
+  
+}
+.choose__answer::after{
+  content: "";
+  position: absolute;
+  display: none;
+  left: 15%;
+  top: 32%;
+  width: 9px;
+  height: 9px;
+  background-color: #f89513;
+  border-radius: 50%;
+  
+}
+.choose__radio:checked ~ .choose__answer::before {
+  border-color: #f89513;
+}
+.choose__radio:checked ~ .choose__answer::after{
+  display: block;
+}
+
+ /*
+.form__buttons{
+  margin-left: auto;
+ 
+}
+.form__question-choose{
+  display: flex;
+}
+label:last-child .choose__answer{
+  margin-left: 28%;
+}
+
+
+.form__buttomline{
+  width: 107%;
+}
+
+.form__buttons button{
+  background: #131415;
+  color: white;
+  border-radius: 4px;
+  width: 123px;
+  height: 48px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: .3s;
+}
+.form__buttons button:hover{
+  background: #f89513;
+}
+*/

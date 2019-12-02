@@ -6,6 +6,9 @@
   background-size: cover;
   background-position: center center;
   position: relative;
+  display: flex;
+  align-items: center;
+  z-index: -2;
 
   &::before {
     content: "";
@@ -18,6 +21,14 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: -1;
 
   }
+}
+.order__title {
+  margin-bottom: 44px;
+
+}
+.order__form {
+  width: 80%;
 }
