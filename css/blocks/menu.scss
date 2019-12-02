@@ -60,28 +60,36 @@
   }
 }
 
+
 .menu__name {
   @include gagalin();
   line-height: 2;
   text-align: center;
   font-size: 35px;
   text-transform: uppercase;
-  writing-mode: vertical-rl;
-  direction: ltr;  
-  text-orientation: sideways-left;
+  color: $white;
   background-size: cover;
   position: relative;
+  width: 80px;
   z-index: 3;
    
+  & div {
+    position: absolute;
+    top: 50%;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: 0 0;
+    white-space: nowrap;
+  }
+
  &:before {
    content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: rgba($color: $black, $alpha: .5);
- z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($color: $black, $alpha: .5);
+  z-index: -2;
  }
 
   &--meat {
@@ -113,15 +121,6 @@
     width: 28px;
   }*/
   
-
- /* &::before {
-   content: ' ';
-   width: 0;
-   height: 0;
-   border: 40px solid transparent;
-   border-bottom-color: $yellow;
-  border-top: 0;
-  }*/
 
 }
 

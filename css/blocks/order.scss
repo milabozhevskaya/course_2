@@ -1,0 +1,23 @@
+.order {
+  height: 100vh;
+  min-height: 650px;
+  background-image: url('../img/bg/order.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url('../img/bg/order-mask.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+  }
+}
