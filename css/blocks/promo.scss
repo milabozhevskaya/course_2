@@ -42,6 +42,7 @@
 .promo__burger {
   display: inline-block;
   position: relative;
+ 
   left: 50%;
   transform: translateX(-50%);
   max-width: 100%;
@@ -73,6 +74,7 @@
   text-transform: lowercase;
   @include tablets {
     font-size: rem(52px);
+    margin-top: 0;
   }
   @include phones {
     font-size: rem(36px);
@@ -87,7 +89,7 @@
   background-size: cover;*/
   display: flex;
   position: absolute;
-  bottom: rem(40px);
+  bottom: 3%;
   left: 50%;
   transform: translateX(-50%);
   width: rem(60px);

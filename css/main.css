@@ -763,7 +763,8 @@ footer {
   text-transform: lowercase; }
   @media screen and (max-width: 768px) {
     .promo__subtitle {
-      font-size: 3.25rem; } }
+      font-size: 3.25rem;
+      margin-top: 0; } }
   @media screen and (max-width: 480px) {
     .promo__subtitle {
       font-size: 2.25rem; } }
@@ -778,7 +779,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 3%;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
