@@ -15,4 +15,8 @@
   padding-top: rem(10px);
   padding-bottom: rem(12px);
   flex-direction: row;
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+  }
 }

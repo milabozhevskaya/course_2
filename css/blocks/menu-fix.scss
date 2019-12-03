@@ -3,6 +3,9 @@
   top: rem(91px);
   right: rem(51px);
   z-index: 2;
+  @include tablets {
+    display: none;
+  }
   @include phones {
     display: none;
   }
@@ -16,7 +19,9 @@
   border: rem(1px) solid transparent;
   margin-bottom: rem(8px);
   position: relative;
-
+  &:hover {
+    border-color: $white;
+  }
   &--active {
     border-color: $white;
   }

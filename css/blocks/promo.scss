@@ -67,10 +67,13 @@
 .promo__subtitle {
   @include lifehack();
   margin-top: rem(20px);
-  font-size: rem(65px);
+  font-size: rem(57px);
   color: $white;
   line-height: 1;
   text-transform: lowercase;
+  @include tablets {
+    font-size: rem(52px);
+  }
   @include phones {
     font-size: rem(36px);
   }

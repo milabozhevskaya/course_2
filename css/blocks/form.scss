@@ -4,12 +4,20 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .form__col {
   display: flex;
   flex-direction: column;
   margin-right: rem(20px);
   width: 50%;
+  @include phones {
+    margin-right: 0;
+    width: 100%;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -21,6 +29,28 @@
   flex-direction: row;
   margin-bottom: rem(15px);
   flex-wrap: nowrap;
+  @include phones {
+    & label {
+      margin-right: 2%;
+      &:last-child {
+        margin-right: 0;
+      }
+      
+    }
+  }
+  &--four {
+    & label {
+      &:last-child {
+        @include phones {
+          display: none;
+      }
+      &:nth-last-child(2) {
+        margin-right: 0;
+      }
+    }
+   
+    }
+  }
 }
 
 
@@ -72,11 +102,20 @@
  }
  
  .form__buttomline {
+   @include phones {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+
+   }
 
   & label {
     display: flex;
     flex-wrap: nowrap;
-    margin-right: 20px;
+    margin-right: rem(20px);
+    @include phones {
+      margin-right: rem(10px);
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -100,11 +139,16 @@
   // border: rem(1px) solid #c9c9c9;
   background-color: $white;
   border-radius: 50%;
-  
+  @include phones {
+    margin-right: rem(5px);
+  }
 }
 
 .choose__answer {
   align-items: center;
+  @include phones {
+    font-size: rem(14px);
+  }
 }
 .choose__answer::after{
   content: "";
@@ -169,6 +213,11 @@
   display: block;
 }
 .form__buttons {
+  margin-bottom: 0;
+  @include phones {
+    justify-content: center;
+
+  }
   & .btn__ref {
     text-transform: none;
     @include ubuntu(light);
