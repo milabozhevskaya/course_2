@@ -1,21 +1,27 @@
 
 .nav {
-  display:flex;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  flex-wrap: nowrap;
 }
 
 .nav__list {
-  display:flex;
+  width: 100%;
   align-items: center;
-  flex-wrap: wrap;
+  display:flex;
+  justify-content: flex-end;
+  
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .nav__item {
   display:flex;
   align-items: center;
-  margin-right: rem(15px);
-
+  margin-right: rem(8px);
+  
   &:before {
     content:"";
     width: rem(4px);
@@ -23,7 +29,7 @@
     background-color: $white;
     border-radius: 50%;
     display: block;  
-    margin-right: rem(17px);  
+    margin-right: rem(10px);  
   }
   &:nth-child(1) {
     &:before{
@@ -36,21 +42,14 @@
   @include ubuntu(medium);
   text-decoration: none;
   color: $white;
-  font-size: rem(13px);
+  font-size: rem(11px);
   line-height: 2;
   text-transform: uppercase;
-  
+  white-space: nowrap;  
+  display: inline-block;
+  vertical-align: middle;
 
   &:hover {
     text-decoration: underline;;
-  }
-}
-
-.nav__btn {
-  & .btn {
-    transition: .4s;
-    &:hover {
-      background-color: $reddark;
-    }
   }
 }

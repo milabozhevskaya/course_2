@@ -56,6 +56,9 @@
         width: 50%;
         padding-left: rem(30px);
         padding-right: rem(33px);
+        @include tablets {
+          padding: 4%;
+        }
     }
   }
 }
@@ -134,5 +137,11 @@
   padding-top: rem(67px);
   box-sizing: border-box;
   overflow: hidden;
+
+  @include tablets {
+    font-size: rem(12px);
+    line-height: 1.6;
+    
+  }
  
 }

@@ -3,6 +3,9 @@
   top: rem(91px);
   right: rem(51px);
   z-index: 2;
+  @include phones {
+    display: none;
+  }
 }
 
 .menu-fix__dat {

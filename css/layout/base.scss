@@ -1,28 +1,46 @@
-html,body{
-  height: 100%;
-  font-size: rem(16px);
+html{
+  
+  font-size: 16px;
+
+  @include tablets {
+    font-size: rem(15px);
+  }
+
+  @include phones {
+    font-size: rem(14px);
+  }
+  html,body{
+    height: 100%;
+  }
 }
 p{
   margin: 0;
+  padding: 0;
 }
 body{
   margin: rem(0px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 .wrapper{
   overflow: hidden;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  position: relative;
+  width: 100%;
 }
 
 .container{
+  position: relative;
   margin: 0 auto;
-  // width: rem(943px);
+  max-width: rem(940px);
   width: 95%;
+  display:flex;
+  flex-direction: column;
+  @include phones {
+    width: 91%;
+  }
 }
 
 ul{
@@ -48,18 +66,32 @@ table{
 *{
   box-sizing: border-box;
 }
+footer {
+  position: relative;
+  width: 100%;
+}
 .section {
   height: 100vh;
-  min-height: 100%;
+  min-height: rem(650px);
   display:flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  // flex-direction: column;
+  // justify-content: center;
+
+  @include tablets {
+    min-height: initial;
+  }
+
 }
 
 .title {
   @include gagalin();
   font-size: rem(72px);
   line-height: 1;
+  @include phones {
+    font-size: rem(60px);
+  }
   &--yellow {
     color: $yellow;
   }
