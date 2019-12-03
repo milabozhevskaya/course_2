@@ -1,14 +1,10 @@
-.form__elem {
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-}
 
-.form__container {
+.form__elem {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
 }
-
 .form__col {
   display: flex;
   flex-direction: column;
@@ -19,12 +15,15 @@
     margin-right: 0;
   }
 }
+
 .form__row {
   display: flex;
-  margin-bottom: rem(15px);
   flex-direction: row;
+  margin-bottom: rem(15px);
   flex-wrap: nowrap;
 }
+
+
 
 .form__block {
   flex: 1;
@@ -43,7 +42,7 @@
 .form__input {
   width: 100%;
   background: $white;
-  border-radius: rem(5px);
+  border-radius: rem(3px);
   border: rem(2px) solid transparent;
   outline: none;
 
@@ -56,6 +55,8 @@
   position: relative;
   display: flex;
   color: $white;
+  @include ubuntu(light);
+  font-size: rem(14px);
 }
 
 
@@ -63,7 +64,7 @@
   height: rem(90px);
   resize: vertical;
   width: 107%;
-  border: rem(1px) solid transparent;
+  border: rem(2px) solid transparent;
   outline: none;
   &:focus{
     border-color: $yellow;
@@ -75,10 +76,15 @@
   & label {
     display: flex;
     flex-wrap: nowrap;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
+
  }
  .choose__radio:checked ~ .choose__answer {
-  color: #f89513;
+  color: $red;
 }
 .choose__radio{
   display: none;
@@ -88,30 +94,90 @@
  .choose__answer::before{
   content: "";
   flex-shrink: 0;
-  margin-right: rem(5px);
-  width: rem(20px);
-  height: rem(20px);
-  border: rem(1px) solid #c9c9c9;
+  margin-right: rem(10px);
+  width: rem(15px);
+  height: rem(15px);
+  // border: rem(1px) solid #c9c9c9;
+  background-color: $white;
   border-radius: 50%;
   
+}
+
+.choose__answer {
+  align-items: center;
 }
 .choose__answer::after{
   content: "";
   position: absolute;
   display: none;
-  left: 15%;
-  top: 32%;
-  width: rem(9px);
-  height: rem(9px);
-  background-color: #f89513;
+  left: 3%;
+  top: 30%;
+  width: rem(7px);
+  height: rem(7px);
+  background-color: $red;
   border-radius: 50%;
   
 }
+
 .choose__radio:checked ~ .choose__answer::before {
-  border-color: #f89513;
+  border-color: $yellow;
 }
 .choose__radio:checked ~ .choose__answer::after{
   display: block;
+}
+.choose__checkbox {
+  display: none;
+  
+}
+.radio-phone {
+  position: relative;
+
+}
+.checkbox-yes {
+  display: flex;
+  flex-direction: row;
+  color: $white;
+  @include ubuntu(light);
+  font-size: rem(14px);
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    margin-right: rem(10px);
+    width: rem(16px);
+    height: rem(16px);
+    border: rem(1px) solid $white;
+    background-color: $white;
+    border-radius: 20%;
+    display: flex;
+  }
+}
+.checkbox-svg {
+  display: none;
+  position: absolute;
+  top: -30%;
+  left: -7%;
+
+}
+.choose__checkbox:checked ~ .checkbox-yes{
+  color: $red;
+::before {
+  border-color: $yellow;
+}
+ 
+}
+.choose__checkbox:checked ~ .checkbox-svg{
+  display: block;
+}
+.form__buttons {
+  & .btn__ref {
+    text-transform: none;
+    @include ubuntu(light);
+    font-size: rem(14px);
+    &:hover {
+      background-color: $red;
+      text-transform: uppercase;
+    }
+  }
 }
 
  /*

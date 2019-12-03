@@ -21,8 +21,15 @@
   text-align: right;
   align-items: center;
   & .btn {
+    
     @include phones {
       margin-right: 15%;
+    }
+  }
+  & .btn__ref {
+    background-color: $red;
+    &:hover {
+      background-color: $reddark;
     }
   }
 }

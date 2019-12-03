@@ -44,8 +44,8 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
     padding-top: 24%;
     width: 100%;
   }
@@ -160,6 +160,10 @@
     overflow: hidden;
     margin-right: rem(21px);
     flex-shrink: 0;
+    @include phones {
+      margin-right: 0;
+    }
+
   & img {
     display: block;
     width: 100%;

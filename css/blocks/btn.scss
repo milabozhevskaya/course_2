@@ -1,7 +1,7 @@
 .btn__ref {
   padding: rem(13px) rem(15px);
   border-radius: rem(5px);
-  background-color: $red;
+  
   text-transform: uppercase;
   text-decoration: none;
   color: $white;
@@ -9,8 +9,8 @@
   text-align: center;
   display: flex;
   @include phones {
-    padding: rem(10px) rem(11px);
-    font-size: rem(12px);
+    padding: rem(10px) rem(13px);
+    font-size: rem(13px);
   }
 }
 
@@ -21,8 +21,9 @@
   align-items: center;
   & .btn__ref {
     transition: .4s;
-    &:hover {
-      background-color: $reddark;
-    }
+    
+    // &:hover {
+    //   background-color: $reddark;
+    // }
   }
 }

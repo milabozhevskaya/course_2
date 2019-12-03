@@ -25,6 +25,12 @@
   position: absolute;
   top: 15%;
   left: 10%;
+  @include phones {
+    font-size: rem(50px);
+    left: 5%;
+    top: 10%;
+    color: $white;
+  }
   }
 .menu__ack {
  
@@ -51,6 +57,9 @@
   &--active {
     & .menu__name {
       color: $yellow;
+      @include phones {
+        color: $white;
+      }
     }
     & .menu__desc {
         width: 50%;
@@ -58,6 +67,9 @@
         padding-right: rem(33px);
         @include tablets {
           padding: 4%;
+        }
+        @include phones {
+          display: none;
         }
     }
   }
@@ -75,13 +87,21 @@
   position: relative;
   width: rem(80px);
   z-index: 3;
-   
+   @include phones {
+     width: rem(70px);
+     font-size: rem(35px);
+   }
   & div {
     position: absolute;
     top: 50%;
     transform: rotate(-90deg) translateX(-50%);
     transform-origin: 0 0;
     white-space: nowrap;
+    @include phones {
+     top: 90%;
+    transform: rotate(-90deg) translateX(0%);
+    transform-origin: 0 0;
+    }
   }
 
  &:before {
