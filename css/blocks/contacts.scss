@@ -6,6 +6,9 @@
   justify-content: flex-start;
   line-height: 1.71;
   font-size: rem(14px);
+  @include phones {
+    align-items: center;
+  }
 
   & span {
     @include ubuntu(light);

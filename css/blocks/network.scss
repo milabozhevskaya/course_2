@@ -3,6 +3,11 @@
  display: flex;
  justify-content: flex-end;
   width: 50%;
+  @include phones {
+    
+      align-items: center;
+    
+  }
 
   &__ref {
     align-items: center;

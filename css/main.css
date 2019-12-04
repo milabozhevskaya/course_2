@@ -1519,7 +1519,6 @@ footer {
 .form__input--textarea {
   height: 5.625rem;
   resize: vertical;
-  width: 107%;
   border: 0.125rem solid transparent;
   outline: none; }
   .form__input--textarea:focus {
@@ -1787,6 +1786,11 @@ label:last-child .choose__answer{
   justify-content: flex-start;
   line-height: 1.71;
   font-size: 0.875rem; }
+  @media screen and (max-width: 480px) {
+    .contacts {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
   .contacts span {
     font-family: 'Ubuntu',Helvetica,sans-serif;
     font-weight: 300;
@@ -1805,6 +1809,11 @@ label:last-child .choose__answer{
   -ms-flex-pack: end;
   justify-content: flex-end;
   width: 50%; }
+  @media screen and (max-width: 480px) {
+    .network {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
   .network__ref {
     -webkit-box-align: center;
     -ms-flex-align: center;
