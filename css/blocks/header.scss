@@ -1,12 +1,40 @@
 .header {
   position: absolute;
   width: 100%;
-  top: 11px;
+  top: rem(15px);
   z-index: 1;
+  align-items: center;
 }
 
 .header__container{
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+  position: relative;
+  @include tablets {
+    width: 90%;
+  }
+  @include phones {
+    width: 90%;
+  }
+}
+.header__menu {
+	display: flex;
+  text-align: right;
   align-items: center;
+  & .btn {
+    @include tablets {
+      margin-right: 15%;
+    }
+    @include phones {
+      margin-right: 15%;
+    }
+  }
+  & .btn__ref {
+    background-color: $red;
+    &:hover {
+      background-color: $reddark;
+    }
+  }
 }

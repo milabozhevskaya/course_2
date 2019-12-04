@@ -1,32 +1,55 @@
 .reviews__list {
   height: 100%;
+  width: 100%;
   display:flex;
   flex-wrap: wrap;
 }
 
 .reviews__item {
-  flex-basis: 25%;
+  // flex-basis: 25%;
+  width: 25%;
   height: 50%;
   position: relative;
   filter: grayscale(100%);
+  
   &:hover {
     .reviews__text {
       opacity: 1;
+
+     
     }
   }
+
+  @include tablets {
+    flex-basis: 50%;
+    height: 25%;
+  }
+
+}
+
+.review {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .reviews__photo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
+  // object-fit: cover;
 
+
+}
+.photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .reviews__text {
   opacity: 0;
   @include ubuntu (light);
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.7;
   text-align: left;
   color: $white;
@@ -36,17 +59,77 @@
   bottom: 0;
   right: 0;
   background-color: rgba($black,.6);
-  padding-top: 47px;
-  padding-bottom: 50px;
-  padding-left: 20px;
-  padding-right: 33px;
+  padding-top: 10%;
+  padding-bottom: 0;
+  padding-left: 12%;
+  padding-right: 8%;
   transition: opacity .7s;
-  & div {
-    margin-bottom: 16px;
+  & .btn__ref2 {
+    display: none;
+  }
+  & .btn__ref {
+    background-color: $gray;
+       
+      &:hover {
+        background-color: $graydark;
+      
+    }
+  }
+  
+
+  & .reviews__name {
+    margin-bottom: rem(16px);
     @include gagalin();
     text-transform: uppercase;
   }
   & p {
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
   }
+  & .btn {
+    
+    transition: .4s;
+    @include tablets {
+      justify-content: center;
+    }
+    @include phones {
+      justify-content: center;
+    }
+    
+}
+@include tablets {
+  padding: 6%;
+ 
+  text-align: center;
+  & .reviews__name {
+    margin-bottom: 1%;
+  }
+  & p {
+    font-size: rem(12px);
+    margin-bottom: 2%;
+  }
+  & .btn__ref{
+    padding: rem(10px) rem(12px);
+  }
+}
+@include phones {
+  padding: 10%;
+  padding-top: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  p {
+    display: none;
+  }
+  .reviews__name {
+    font-size: rem(25px);
+    line-height: 1.2;
+
+  }
+  .btn__ref1 {
+    display: none;
+  }
+  .btn__ref2 {
+    display: flex;
+  }
+}
 }

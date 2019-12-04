@@ -14,17 +14,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 25px;
+  padding-top: 20%;
 }
 .best__title{
   align-items: center;
   margin:0 auto;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
+  @include phones {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: rem(45px);
+  }
   }
 .best__list {
   display:flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .best__item {
@@ -33,22 +41,38 @@
   align-items: center;
   width: 30%;
   text-align: center;
+  @include phones {
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5%;
+    & .best__icon {
+      margin-right: 5%;
+      margin-bottom: 0;
+    }
+    & h3 {
+      font-size: rem(18px);
+    }
+    & p {
+      font-size: rem(10px);
+      line-height: 1.4;
+    }
+  }
  
-  & img {
-    width: 85px;
-    height: 80px;
+  & .best__icon {
     display: block;  
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
   }
   & h3 {
     @include lifehack();
-    font-size: 24px;
+    font-size: rem(24px);
     line-height: 1.17;
-    margin-bottom: 13px;
+    margin-bottom: rem(13px);
   }
   & p {
     @include ubuntu(light);
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1.71;
+    opacity: .8;
   }
 }

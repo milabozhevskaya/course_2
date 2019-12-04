@@ -1,0 +1,48 @@
+.order {
+  height: 100vh;
+  min-height: 100%;
+  background-image: url('../img/bg/order.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: $z-order;
+
+  &::before {
+    content: "";
+    background-image: url('../img/bg/order-mask.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-order-bg-mask;
+
+  }
+}
+
+.order__container {
+  padding-top: 15%;
+  display: flex;
+  align-items: center;
+  @include phones {
+    padding-top: 25%;
+  }
+}
+
+.order__title {
+  text-align: center;
+  margin-bottom: rem(44px);
+
+}
+.order-form {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}

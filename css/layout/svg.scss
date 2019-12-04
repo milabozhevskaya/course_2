@@ -1,0 +1,69 @@
+.logo-icon {
+  width: rem(92px);
+  height: rem(69px);
+}
+
+.arrow-scroll-icon {
+  width: rem(29px);
+  height: rem(14px);
+  transition: .3s;
+}
+
+.meat-icon {
+  width: rem(97px);
+  height: rem(89px);
+}
+
+.heand-icon {
+  width: rem(73px);
+  height: rem(85px);
+}
+
+.natural-icon {
+  width: rem(88px);
+  height: rem(75px);
+}
+
+@include phones {
+  .feed-icon {
+    width: rem(62px);
+    height: rem(60px);
+  }
+}
+.map-marker-icon {
+  position: absolute;
+  width: rem(46px);
+  height: rem(57px);
+
+}
+
+.phone-icon {
+  width: rem(12px);
+  height: rem(11px);
+  margin-right: rem(3px);
+}
+
+.netw-icon {
+  width: rem(20px);
+  height: rem(20px);
+  opacity: .4;
+  transition: .5s;
+  &--vk {
+    width: rem(23px);
+    height: rem(13px);
+  }
+
+  &--tw {
+    width: rem(20px);
+    height: rem(16px);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+.checkbox-svg {
+  width: rem(40px);
+  height: rem(30px);
+  fill: $red;
+}

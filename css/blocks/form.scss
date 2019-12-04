@@ -1,0 +1,262 @@
+
+.form__elem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.form__col {
+  display: flex;
+  flex-direction: column;
+  margin-right: rem(20px);
+  width: 50%;
+  @include phones {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form__row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: rem(15px);
+  flex-wrap: nowrap;
+  @include phones {
+    & label {
+      margin-right: 2%;
+      &:last-child {
+        margin-right: 0;
+      }
+      
+    }
+  }
+  &--four {
+    & label {
+      &:last-child {
+        @include phones {
+          display: none;
+      }
+      &:nth-last-child(2) {
+        margin-right: 0;
+      }
+    }
+   
+    }
+  }
+}
+
+
+
+.form__block {
+  flex: 1;
+  margin-right: rem(20px);
+  width: 100%;
+  @include ubuntu(light);
+  font-size: rem(14px);
+  color: $white;
+
+  &:last-child {
+    margin-right: rem(0px);
+  }
+}
+
+
+.form__input {
+  width: 100%;
+  background: $white;
+  border-radius: rem(3px);
+  border: rem(2px) solid transparent;
+  outline: none;
+
+  &:focus {
+    border-color: $yellow;
+  }
+}
+
+.choose__answer {
+  position: relative;
+  display: flex;
+  color: $white;
+  @include ubuntu(light);
+  font-size: rem(14px);
+}
+
+
+.form__input--textarea{
+  height: rem(90px);
+  resize: vertical;
+  
+  border: rem(2px) solid transparent;
+  outline: none;
+  &:focus{
+    border-color: $yellow;
+  }
+ }
+ 
+ .form__buttomline {
+   @include phones {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+
+   }
+
+  & label {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: rem(20px);
+    @include phones {
+      margin-right: rem(10px);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+ }
+ .choose__radio:checked ~ .choose__answer {
+  color: $red;
+}
+.choose__radio{
+  display: none;
+}
+
+
+ .choose__answer::before{
+  content: "";
+  flex-shrink: 0;
+  margin-right: rem(10px);
+  width: rem(15px);
+  height: rem(15px);
+  // border: rem(1px) solid #c9c9c9;
+  background-color: $white;
+  border-radius: 50%;
+  @include phones {
+    margin-right: rem(5px);
+  }
+}
+
+.choose__answer {
+  align-items: center;
+  @include phones {
+    font-size: rem(14px);
+  }
+}
+.choose__answer::after{
+  content: "";
+  position: absolute;
+  display: none;
+  left: 3%;
+  top: 30%;
+  width: rem(7px);
+  height: rem(7px);
+  background-color: $red;
+  border-radius: 50%;
+  
+}
+
+.choose__radio:checked ~ .choose__answer::before {
+  border-color: $yellow;
+}
+.choose__radio:checked ~ .choose__answer::after{
+  display: block;
+}
+.choose__checkbox {
+  display: none;
+  
+}
+.radio-phone {
+  position: relative;
+
+}
+.checkbox-yes {
+  display: flex;
+  flex-direction: row;
+  color: $white;
+  @include ubuntu(light);
+  font-size: rem(14px);
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    margin-right: rem(10px);
+    width: rem(16px);
+    height: rem(16px);
+    border: rem(1px) solid $white;
+    background-color: $white;
+    border-radius: 20%;
+    display: flex;
+  }
+}
+.checkbox-svg {
+  display: none;
+  position: absolute;
+  top: -30%;
+  left: -7%;
+
+}
+.choose__checkbox:checked ~ .checkbox-yes{
+  color: $red;
+::before {
+  border-color: $yellow;
+}
+ 
+}
+.choose__checkbox:checked ~ .checkbox-svg{
+  display: block;
+}
+.form__buttons {
+  margin-bottom: 0;
+  @include phones {
+    justify-content: center;
+
+  }
+  & .btn__ref {
+    text-transform: none;
+    @include ubuntu(light);
+    font-size: rem(14px);
+    &:hover {
+      background-color: $red;
+      text-transform: uppercase;
+    }
+  }
+}
+
+ /*
+.form__buttons{
+  margin-left: auto;
+ 
+}
+.form__question-choose{
+  display: flex;
+}
+label:last-child .choose__answer{
+  margin-left: 28%;
+}
+
+
+.form__buttomline{
+  width: 107%;
+}
+
+.form__buttons button{
+  background: #131415;
+  color: white;
+  border-radius: rem(4px);
+  width: rem(123px);
+  height: rem(48px);
+  font-size: rem(12px);
+  font-weight: bold;
+  transition: .3s;
+}
+.form__buttons button:hover{
+  background: #f89513;
+}
+*/

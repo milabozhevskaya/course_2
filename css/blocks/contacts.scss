@@ -1,0 +1,22 @@
+
+.contacts {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 1.71;
+  font-size: rem(14px);
+  @include phones {
+    align-items: center;
+  }
+
+  & span {
+    @include ubuntu(light);
+    color: $white;
+  }
+  & a {
+    @include ubuntu(bold);
+    color: $reddark;
+    text-decoration: none;
+  }
+}

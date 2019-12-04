@@ -1,0 +1,22 @@
+.footer {
+  // position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 4;
+  background-color: $black;
+  box-sizing: border-box;
+}
+
+.footer__container{
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: rem(10px);
+  padding-bottom: rem(12px);
+  flex-direction: row;
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+  }
+}

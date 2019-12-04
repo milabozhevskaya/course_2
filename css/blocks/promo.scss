@@ -9,35 +9,99 @@
 .promo__container {
   height: 100%;
   display: flex;
-
+  flex-direction: column;
+  justify-content: center;
+  
 }
 
 .promo__content {
   display: flex;
   align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.promo__img {
+  width: 50%;
+  float: left;
+  margin-right: rem(10px);
+
+  @include tablets {
+    width: 80%;
+    margin-right: 0;
+  }
+  @include phones {
+    width: 78%;
+    margin-right: 0;
+  }
+
+}
+
+.promo__burger {
+  display: inline-block;
+  position: relative;
+ 
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .promo__title {
-  padding-left: 27px;
+  padding-top: rem(115px);
+  width: 50%;
+  @include tablets {
+    padding: 0 7%;
+    width: 80%;
+    text-align: center;
+  }
+  @include phones {
+    padding: 0 7%;
+    width: 80%;
+    text-align: center;
+    font-size: rem(63px);
+  }
 }
 
 .promo__subtitle {
-  @include lifehack;
-  margin-top: 20px;
-  font-size: 65px;
+  @include lifehack();
+  margin-top: rem(20px);
+  font-size: rem(57px);
   color: $white;
   line-height: 1;
+  text-transform: lowercase;
+  @include tablets {
+    font-size: rem(52px);
+    margin-top: 0;
+  }
+  @include phones {
+    font-size: rem(36px);
+  }
 }
 
 .promo__scroll {
-  width: 29px;
-  height: 14px;
+  /*width: rem(29px);
+  height: rem(14px);
   background-image: url(../img/icons/arrow-scroll.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
+  background-size: cover;*/
+  display: flex;
   position: absolute;
-  bottom: 40px;
+  bottom: 3%;
   left: 50%;
   transform: translateX(-50%);
+  width: rem(60px);
+  transition: .3s;
+  height: rem(60px);
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    .arrow-scroll-icon {
+      margin-top: rem(-15px);
+      width: rem(45px);
+      height: rem(45px);
+    }
+  }
 }
