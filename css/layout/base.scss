@@ -80,7 +80,10 @@ footer {
   // justify-content: center;
 
   @include tablets {
-    min-height: initial;
+    min-height: 0;
+  }
+  @include phones {
+    min-height: 0;
   }
 
 }

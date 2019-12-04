@@ -1,7 +1,60 @@
 .map {
-  background-image: url('../img/bg/bg-map.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  display: flex;  
   position: relative;
+  flex-direction: column;
+  
+  
+}
+.map__img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.map__pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  
+}
+
+.map-marker-icon {
+  
+  &--bol {
+    top: rem(175px);
+    left: rem(524px);
+    @include tablets {
+    top: 28%;
+    left: 50%;
+    }
+  }
+
+  &--nev {
+    top: rem(280px);
+    left: rem(660px);
+    @include tablets {
+      top: 21%;
+      left: 77%;
+    }
+  }
+
+  &--cudr {
+    top: rem(398px);
+    left: rem(878px);
+    @include tablets {
+      top: 47%;
+      left: 91%;
+    }
+    }
+  
+
+  &--mosk {
+    top: rem(500px);
+    left: rem(529px);
+    @include tablets {
+      left: 49%;
+      top: 61%;
+    }
+  }
 }

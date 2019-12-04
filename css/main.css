@@ -424,7 +424,10 @@ footer {
   overflow: hidden; }
   @media screen and (max-width: 768px) {
     .section {
-      min-height: initial; } }
+      min-height: 0; } }
+  @media screen and (max-width: 480px) {
+    .section {
+      min-height: 0; } }
 
 .title {
   font-family: 'gagalinregular',Helvetica,sans-serif;
@@ -474,18 +477,6 @@ footer {
   position: absolute;
   width: 2.875rem;
   height: 3.5625rem; }
-  .map-marker-icon--bol {
-    top: 10.9375rem;
-    left: 32.75rem; }
-  .map-marker-icon--nev {
-    top: 17.5rem;
-    left: 41.25rem; }
-  .map-marker-icon--cudr {
-    top: 24.875rem;
-    left: 54.875rem; }
-  .map-marker-icon--mosk {
-    top: 31.25rem;
-    left: 33.0625rem; }
 
 .phone-icon {
   width: 0.75rem;
@@ -1696,14 +1687,61 @@ label:last-child .choose__answer{
 }
 */
 .map {
-  background-image: url("../img/bg/bg-map.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  position: relative; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.map__img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+.map__pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.map-marker-icon--bol {
+  top: 10.9375rem;
+  left: 32.75rem; }
+  @media screen and (max-width: 768px) {
+    .map-marker-icon--bol {
+      top: 28%;
+      left: 50%; } }
+
+.map-marker-icon--nev {
+  top: 17.5rem;
+  left: 41.25rem; }
+  @media screen and (max-width: 768px) {
+    .map-marker-icon--nev {
+      top: 21%;
+      left: 77%; } }
+
+.map-marker-icon--cudr {
+  top: 24.875rem;
+  left: 54.875rem; }
+  @media screen and (max-width: 768px) {
+    .map-marker-icon--cudr {
+      top: 47%;
+      left: 91%; } }
+
+.map-marker-icon--mosk {
+  top: 31.25rem;
+  left: 33.0625rem; }
+  @media screen and (max-width: 768px) {
+    .map-marker-icon--mosk {
+      left: 49%;
+      top: 61%; } }
 
 .footer {
-  position: absolute;
   width: 100%;
   bottom: 0;
   z-index: 4;
