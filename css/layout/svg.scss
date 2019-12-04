@@ -24,6 +24,12 @@
   height: rem(75px);
 }
 
+@include phones {
+  .feed-icon {
+    width: rem(62px);
+    height: rem(60px);
+  }
+}
 .map-marker-icon {
   position: absolute;
   width: rem(46px);

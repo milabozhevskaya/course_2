@@ -22,8 +22,8 @@
   margin-bottom: rem(50px);
   @include phones {
     text-align: center;
-    margin-bottom: 10%;
-    font-size: rem(50px);
+    margin-bottom: 5%;
+    font-size: rem(45px);
   }
   }
 .best__list {
@@ -45,16 +45,17 @@
     flex-direction: row;
     text-align: left;
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     & .best__icon {
-      margin-right: 10%;
+      margin-right: 5%;
       margin-bottom: 0;
     }
     & h3 {
-      font-size: rem(20px);
+      font-size: rem(18px);
     }
     & p {
       font-size: rem(10px);
+      line-height: 1.4;
     }
   }
  

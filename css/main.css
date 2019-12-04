@@ -465,6 +465,11 @@ footer {
   width: 5.5rem;
   height: 4.6875rem; }
 
+@media screen and (max-width: 480px) {
+  .feed-icon {
+    width: 3.875rem;
+    height: 3.75rem; } }
+
 .map-marker-icon {
   position: absolute;
   width: 2.875rem;
@@ -655,7 +660,7 @@ footer {
     text-decoration: underline; }
 
 .btn__ref {
-  padding: 0.8125rem 0.9375rem;
+  padding: 0.5625rem 0.9375rem;
   border-radius: 0.3125rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -667,7 +672,7 @@ footer {
   display: flex; }
   @media screen and (max-width: 480px) {
     .btn__ref {
-      padding: 0.625rem 0.8125rem;
+      padding: 0.5625rem 0.8125rem;
       font-size: 0.8125rem; } }
 
 .btn {
@@ -835,8 +840,8 @@ footer {
   @media screen and (max-width: 480px) {
     .best__title {
       text-align: center;
-      margin-bottom: 10%;
-      font-size: 3.125rem; } }
+      margin-bottom: 5%;
+      font-size: 2.8125rem; } }
 
 .best__list {
   display: -webkit-box;
@@ -875,14 +880,15 @@ footer {
       flex-direction: row;
       text-align: left;
       width: 100%;
-      margin-bottom: 10%; }
+      margin-bottom: 5%; }
       .best__item .best__icon {
-        margin-right: 10%;
+        margin-right: 5%;
         margin-bottom: 0; }
       .best__item h3 {
-        font-size: 1.25rem; }
+        font-size: 1.125rem; }
       .best__item p {
-        font-size: 0.625rem; } }
+        font-size: 0.625rem;
+        line-height: 1.4; } }
   .best__item .best__icon {
     display: block;
     margin-bottom: 2.1875rem; }
@@ -910,6 +916,7 @@ footer {
 .team__container {
   background-color: rgba(74, 81, 85, 0.9);
   position: absolute;
+  width: 50%;
   height: 100%;
   z-index: 1;
   display: -webkit-box;
@@ -1320,12 +1327,19 @@ footer {
   .reviews__text p {
     margin-bottom: 0.75rem; }
   .reviews__text .btn {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     -webkit-transition: .4s;
     -o-transition: .4s;
     transition: .4s; }
+    @media screen and (max-width: 768px) {
+      .reviews__text .btn {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
+    @media screen and (max-width: 480px) {
+      .reviews__text .btn {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
   @media screen and (max-width: 768px) {
     .reviews__text {
       padding: 6%;

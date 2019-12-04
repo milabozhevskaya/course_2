@@ -1,5 +1,5 @@
 .btn__ref {
-  padding: rem(13px) rem(15px);
+  padding: rem(9px) rem(15px);
   border-radius: rem(5px);
   
   text-transform: uppercase;
@@ -9,7 +9,7 @@
   text-align: center;
   display: flex;
   @include phones {
-    padding: rem(10px) rem(13px);
+    padding: rem(9px) rem(13px);
     font-size: rem(13px);
   }
 }

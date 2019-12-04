@@ -86,9 +86,14 @@
     margin-bottom: rem(12px);
   }
   & .btn {
-    justify-content: center;
-    transition: .4s;
     
+    transition: .4s;
+    @include tablets {
+      justify-content: center;
+    }
+    @include phones {
+      justify-content: center;
+    }
     
 }
 @include tablets {
