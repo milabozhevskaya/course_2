@@ -504,6 +504,10 @@ footer {
   height: 1.875rem;
   fill: #e45028; }
 
+.burger-icon {
+  width: 5.625rem;
+  height: 5.625rem; }
+
 .header {
   position: absolute;
   width: 100%;
@@ -894,6 +898,12 @@ footer {
     font-size: 0.875rem;
     line-height: 1.71;
     opacity: .8; }
+
+.burgers {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(#eb8c38), to(#f9b43b));
+  background-image: -webkit-linear-gradient(bottom, #f9b43b, #eb8c38, #f9b43b);
+  background-image: -o-linear-gradient(bottom, #f9b43b, #eb8c38, #f9b43b);
+  background-image: linear-gradient(to top, #f9b43b, #eb8c38, #f9b43b); }
 
 .team {
   height: 100vh;
