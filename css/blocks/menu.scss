@@ -47,6 +47,7 @@
   display:flex;
   flex-direction: row;
   height: 100%;
+  justify-content: flex-end;
 }
 
 .menu__item {
@@ -55,6 +56,7 @@
   flex-direction: row;
   justify-content: flex-end;
   &--active {
+    width: 49%;
     & .menu__name {
       color: $yellow;
       @include phones {
@@ -62,15 +64,16 @@
       }
     }
     & .menu__desc {
-        width: 50%;
+        width: 100%;
         padding-left: rem(30px);
         padding-right: rem(33px);
-        @include tablets {
-          padding: 4%;
-        }
-        @include phones {
-          display: none;
-        }
+        
+    }
+    @include tablets {
+      width: 100%;
+    }
+    @include phones {
+      
     }
   }
 }
