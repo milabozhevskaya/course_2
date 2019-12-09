@@ -9,6 +9,11 @@
   flex-direction: row;
   position: relative;
   max-width: rem(1000px);
+  @include tablets {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+  }
 }
 
 .burgers__content {
@@ -16,6 +21,10 @@
   flex-direction: row;
   align-items: center;
   position: relative;
+  @include tablets {
+    flex-direction: column;
+    padding-top: 15%;
+  }
 }
 
 .burgers__arrow {
@@ -45,6 +54,9 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  @include tablets {
+    background-color: $red;
+  }
 }
 
 .burgers__icon-burger {
@@ -54,6 +66,10 @@
    
   top: 16%;
   left: 3%;
+  @include tablets {
+    top: 3%;
+    left: 2%;
+  }
  
   & .burger-icon-title {
     @include gagalin();
@@ -72,6 +88,10 @@
   flex-direction: column;
   align-items: center;
   opacity: .6;
+  @include tablets {
+    top: 3%;
+    left: 85%;
+  }
   & .kkal-icon-title {
     @include gagalin();
     font-size: rem(14px);
@@ -103,6 +123,11 @@
   width: 26%;
   z-index: $z-burgers__arrow;
   padding: 2%;
+  @include tablets {
+    top: 3%;
+    left: 21%;
+    width: 60%;
+  }
 }
 .composition__list {
   display: flex;
@@ -121,6 +146,9 @@
     font-size: rem(14px);
     line-height: 1.71;
     color: $grayblack;
+  }
+  @include tablets {
+    margin-bottom: 0;
   }
 }
 
@@ -158,15 +186,25 @@
  
   left: 50%;
   transform: translateX(-50%);
-  
+  @include tablets {
+    width: 95%;
+    height: 95%;
+  }
 }
 
 .burgers__price {
   width: 60%;
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .burgers__title {
+  font-size: rem(63px);
   margin-bottom: 5%;
+  @include tablets {
+    font-size: rem(50px);
+  }
 }
 
 .burgers__desc {
@@ -175,12 +213,14 @@
   line-height: 1.71;
   color: $white;
   margin-bottom: 5%;
+  width: 95%;
 }
 
 .burgers__order {
   display: flex;
   position: relative;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .price {
@@ -189,8 +229,21 @@
   line-height: 0.93;
   letter-spacing: -0.75px;
   color: $red;
+  margin-right: 5%;
   & span {
     font-size: rem(20px);
+  }
+  @include tablets {
+    font-size: rem(45px);
+    & span {
+      font-size: rem(25px);
+    }
+  }
+  @include phones {
+    font-size: rem(30px);
+    & span {
+      font-size: rem(15px);
+    }
   }
 }
 
@@ -201,7 +254,13 @@
 }
 
 .burgers__button {
-  position: absolute;
-    left: 35%;
-    top: 47%;
+    position: relative;
+    top: rem(15px);
+    @include tablets {
+      left: 60%;
+    }
+    @include phones {
+      top: 18%;
+      left: 10%;
+    }
 }
