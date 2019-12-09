@@ -1,7 +1,7 @@
 .btn__ref {
   padding: rem(9px) rem(15px);
   border-radius: rem(5px);
-  
+  @include ubuntu(medium);
   text-transform: uppercase;
   text-decoration: none;
   color: $white;

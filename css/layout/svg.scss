@@ -68,6 +68,21 @@
   fill: $red;
 }
 .burger-icon {
-  width: rem(90px);
-  height: rem(90px);
+  width: rem(46px);
+  height: rem(44px);
+}
+.arrow-icon {
+  width: rem(27px);
+  height: rem(15px);
+  &-back {
+    transform: rotate(90deg);
+  }
+  &-next {
+    transform: rotate(270deg);
+  }
+}
+
+.kkal-icon {
+  width: rem(55px);
+  height: rem(55px);
 }
