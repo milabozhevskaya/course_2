@@ -55,3 +55,39 @@ for (let i = 0; i < teamItemLength; i++) {
   });
 };
 
+////hamburger
+const hamburger = document.querySelector('.hamb-menu');
+const first = document.querySelector('.first');
+const firstClose = document.querySelector('.first__close');
+
+hamburger.addEventListener('click', function(event) {
+  event.preventDefault();
+  first.style.display = 'flex';
+});
+
+firstClose.addEventListener('click', function(event) {
+  event.stopPropagation();
+  event.preventDefault();
+
+  first.style.display = 'none';
+  first.addEventListener('click', function(event) {
+    event.preventDefault();
+  })
+})
+
+
+
+
+////preventDefault for reviews and burgers
+const reviews = document.querySelector('.reviews');
+const burgers = document.querySelector('.burgers');
+
+reviews.addEventListener('click', function(event) {
+  event.preventDefault();
+});
+
+burgers.addEventListener('click', function(event) {
+  event.preventDefault();
+});
+
+

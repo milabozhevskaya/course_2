@@ -874,7 +874,7 @@ footer {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding-top: 20%; }
+  padding-top: 15vh; }
 
 .best__title {
   -webkit-box-align: center;
@@ -885,8 +885,8 @@ footer {
   @media screen and (max-width: 480px) {
     .best__title {
       text-align: center;
-      margin-bottom: 5%;
-      font-size: 2.8125rem; } }
+      margin-bottom: 8vh;
+      font-size: 3.125rem; } }
 
 .best__list {
   display: -webkit-box;
@@ -925,7 +925,7 @@ footer {
       flex-direction: row;
       text-align: left;
       width: 100%;
-      margin-bottom: 5%; }
+      margin-bottom: 5vh; }
       .best__item .best__icon {
         margin-right: 5%;
         margin-bottom: 0; }
@@ -2402,7 +2402,7 @@ label:last-child .choose__answer{
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 48rem;
+  width: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
