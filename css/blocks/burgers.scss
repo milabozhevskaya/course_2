@@ -36,9 +36,11 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%);
+ 
   &--back {
     left: 0;
     z-index: $z-burgers__arrow;
+    
     @include tablets {
       left: 2%;
     }
@@ -54,9 +56,11 @@
   }
   &--next {
     right: -3%;
+    
     &:hover {
       right: -5%;
       top: 48%;
+   
       @include phones {
         right: -7%;
       }
@@ -138,8 +142,16 @@
           width: 50vw;
          }
          @include phones {
-          display: none;
-         }
+           width: 60vw;
+          flex-direction: row;
+          justify-content: space-between;;
+          & .composition__list {
+            width: 80%;
+          }
+          & .ref-close {
+          display: flex;
+          align-items: flex-start;
+        }
         
       }
     }
@@ -154,6 +166,7 @@
     color: $white;
   }
 }
+}
 
 .burgers__icon-kkal {
   position: absolute;
@@ -163,14 +176,7 @@
   flex-direction: column;
   align-items: center;
   opacity: .6;
-  @include tablets {
-    top: 2vh;
-    left: 85%;
-  }
-  @include phones {
-    top: -4vh;
-    left: 85%;
-  }
+  
   & .kkal-icon-title {
     @include gagalin();
     font-size: rem(14px);
@@ -187,6 +193,14 @@
     position: absolute;
     left: 21%;
     top: 30%;
+  }
+  @include tablets {
+    top: 2vh;
+    left: 85%;
+  }
+  @include phones {
+    top: -4vh;
+    left: 85%;
   }
 }
 
@@ -209,21 +223,10 @@
     display: none;
     
   }
-  &--active {
-    @include phones {
-    flex-direction: row;
-    justify-content: space-between;;
-    & .composition__list {
-      width: 80%;
-    }
-    & .ref-close {
-    display: flex;
-    align-items: flex-start;
-  }
-  }
+  
 }
  
-}
+
 .composition__list {
   display: flex;
   flex-direction: column;

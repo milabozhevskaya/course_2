@@ -1104,13 +1104,29 @@ footer {
           width: 50vw; } }
       @media screen and (max-width: 480px) {
         .burgers__composition .burgers__icon-burger:hover ~ .composition {
-          display: none; } }
-  .burgers__composition .burger-icon-title {
-    font-family: 'gagalinregular',Helvetica,sans-serif;
-    font-size: 0.875rem;
-    line-height: 2;
-    text-transform: uppercase;
-    color: #fff; }
+          width: 60vw;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between; }
+          .burgers__composition .burgers__icon-burger:hover ~ .composition .composition__list {
+            width: 80%; }
+          .burgers__composition .burgers__icon-burger:hover ~ .composition .ref-close {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start; } }
+    .burgers__composition .burgers__icon-burger .burger-icon-title {
+      font-family: 'gagalinregular',Helvetica,sans-serif;
+      font-size: 0.875rem;
+      line-height: 2;
+      text-transform: uppercase;
+      color: #fff; }
 
 .burgers__icon-kkal {
   position: absolute;
@@ -1127,14 +1143,6 @@ footer {
   -ms-flex-align: center;
   align-items: center;
   opacity: .6; }
-  @media screen and (max-width: 768px) {
-    .burgers__icon-kkal {
-      top: 2vh;
-      left: 85%; } }
-  @media screen and (max-width: 480px) {
-    .burgers__icon-kkal {
-      top: -4vh;
-      left: 85%; } }
   .burgers__icon-kkal .kkal-icon-title {
     font-family: 'gagalinregular',Helvetica,sans-serif;
     font-size: 0.875rem;
@@ -1150,6 +1158,14 @@ footer {
     position: absolute;
     left: 21%;
     top: 30%; }
+  @media screen and (max-width: 768px) {
+    .burgers__icon-kkal {
+      top: 2vh;
+      left: 85%; } }
+  @media screen and (max-width: 480px) {
+    .burgers__icon-kkal {
+      top: -4vh;
+      left: 85%; } }
 
 .composition {
   -webkit-transition: opacity .7s, width .4s, height .8s;
@@ -1172,24 +1188,6 @@ footer {
   padding: 6%; }
   .composition .ref-close {
     display: none; }
-  @media screen and (max-width: 480px) {
-    .composition--active {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between; }
-      .composition--active .composition__list {
-        width: 80%; }
-      .composition--active .ref-close {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start; } }
 
 .composition__list {
   display: -webkit-box;
