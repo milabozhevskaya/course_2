@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Бургер</title>
   <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -139,74 +140,82 @@
               </a>
             </div>
         <div class="burgers__content">
-              <div class="burgers__icon-burger">
-            <a href="" class="burger-composition">
+              <div class="burgers__composition">
+                <div class="burgers__icon-burger">
+                  <a href="" class="burger-composition">
+                    
+                  <svg class="burger-icon">
+                    <use xlink:href="img/icons/sprite.svg#burger"></use>
+                </svg>
+                <div class="burger-icon-title">состав</div>
+              </a>
+              </div>
+              <div class="composition">
                   
-                <svg class="burger-icon">
-                  <use xlink:href="img/icons/sprite.svg#burger"></use>
-              </svg>
-              <div class="burger-icon-title">состав</div>
-            </a>
-            </div>
-            <div class="composition">
-              <ul class="composition__list">
-                <li class="composition__item composition__item--beef">
-                    <svg class="composition-icon composition-icon--beef">
-                        <use xlink:href="img/icons/sprite.svg#beef"></use>
+                <ul class="composition__list">
+                  <li class="composition__item composition__item--beef">
+                      <svg class="composition-icon composition-icon--beef">
+                          <use xlink:href="img/icons/sprite.svg#beef"></use>
+                      </svg>
+                    <div class="composition__desc">
+                      <div class="composition__name">Говядина</div>
+                      <div class="grams">300 г</div>
+                    </div>
+                  </li>
+                    
+                  <li class="composition__item composition__item--buns ">
+                    <svg class="composition-icon composition-icon--buns">
+                        <use xlink:href="img/icons/sprite.svg#buns"></use>
                     </svg>
-                  <div class="composition__desc">
-                    <div class="composition__name">Говядина</div>
-                    <div class="grams">300 г</div>
-                  </div>
-                </li>
-                  
-                <li class="composition__item composition__item--buns ">
-                  <svg class="composition-icon composition-icon--buns">
-                      <use xlink:href="img/icons/sprite.svg#buns"></use>
-                  </svg>
-                  <div class="composition__desc">
-                    <div class="composition__name">Булочки</div>
-                    <div class="grams">100 г</div>
-                  </div>
-                </li>
-                <li class="composition__item composition__item--salad">
-                  <svg class="composition-icon composition-icon--salad">
-                      <use xlink:href="img/icons/sprite.svg#salad"></use>
-                  </svg>
-                  <div class="composition__desc">
-                    <div class="composition__name">Зелень</div>
-                    <div class="grams">70 г</div>
-                  </div>
-                </li>
-                <li class="composition__item composition__item--sauce">
-                    <svg class="composition-icon composition-icon--sauce">
-                        <use xlink:href="img/icons/sprite.svg#sauce"></use>
+                    <div class="composition__desc">
+                      <div class="composition__name">Булочки</div>
+                      <div class="grams">100 г</div>
+                    </div>
+                  </li>
+                  <li class="composition__item composition__item--salad">
+                    <svg class="composition-icon composition-icon--salad">
+                        <use xlink:href="img/icons/sprite.svg#salad"></use>
                     </svg>
-                  <div class="composition__desc">
-                    <div class="composition__name">Соус</div>
-                    <div class="grams">150 г</div>
-                  </div>
-                </li>
-                <li class="composition__item composition__item--cucamber">
-                    <svg class="composition-icon composition-icon--cucamber">
-                        <use xlink:href="img/icons/sprite.svg#cucamber"></use>
+                    <div class="composition__desc">
+                      <div class="composition__name">Зелень</div>
+                      <div class="grams">70 г</div>
+                    </div>
+                  </li>
+                  <li class="composition__item composition__item--sauce">
+                      <svg class="composition-icon composition-icon--sauce">
+                          <use xlink:href="img/icons/sprite.svg#sauce"></use>
+                      </svg>
+                    <div class="composition__desc">
+                      <div class="composition__name">Соус</div>
+                      <div class="grams">150 г</div>
+                    </div>
+                  </li>
+                  <li class="composition__item composition__item--cucamber">
+                      <svg class="composition-icon composition-icon--cucamber">
+                          <use xlink:href="img/icons/sprite.svg#cucamber"></use>
+                      </svg>
+                    <div class="composition__desc">
+                      <div class="composition__name">Овощи</div>
+                      <div class="grams">200 г</div>
+                    </div>
+                  </li>
+                  <li class="composition__item composition__item--cheese">
+                      <svg class="composition-icon composition-icon--cheese">
+                          <use xlink:href="img/icons/sprite.svg#cheese"></use>
+                      </svg>
+                    <div class="composition__desc">
+                      <div class="composition__name">Сыр</div>
+                      <div class="grams">80 г</div>
+                    </div>
+                  </li>
+                </ul>
+                <a href="" class="ref-close">
+                    <svg fill="red" class="icon-close-red">
+                        <use xlink:href="img/icons/sprite.svg#closered"></use>
                     </svg>
-                  <div class="composition__desc">
-                    <div class="composition__name">Овощи</div>
-                    <div class="grams">200 г</div>
-                  </div>
-                </li>
-                <li class="composition__item composition__item--cheese">
-                    <svg class="composition-icon composition-icon--cheese">
-                        <use xlink:href="img/icons/sprite.svg#cheese"></use>
-                    </svg>
-                  <div class="composition__desc">
-                    <div class="composition__name">Сыр</div>
-                    <div class="grams">80 г</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                  </a>
+              </div>
+              </div>
             <div class="burgers__icon-kkal">
                 <svg class="kkal-icon">
                     <use xlink:href="img/icons/sprite.svg#kkal"></use>
@@ -683,34 +692,6 @@
       </li>
     </ul>
   </div>
-  <script>
-    const menu = document.querySelector(".menu");
-    const menuItem = document.querySelectorAll('.menu__item');
-    const menuItemLength = menuItem.length;
-
-    menu.addEventListener('click', function(event) {
-      for (let i = 0; i < menuItemLength; i++) {
-        menuItem[i].classList.remove('menu__item--active');
-      }
-    });
-
-    for (let i = 0; i < menuItemLength; i++) {
-      menuItem[i].addEventListener('click', function (event) {
-        event.stopPropagation();
-        event.preventDefault();
-        
-
-        if (menuItem[i].classList.contains('menu__item--active')) {
-          menuItem[i].classList.remove('menu__item--active');
-        } else {
-          for (let i = 0; i < menuItemLength; i++) {
-            menuItem[i].classList.remove('menu__item--active');
-          };
-          menuItem[i].classList.add('menu__item--active');
-        }
-      });
-    }
-
-  </script>
+  
 </body>
 </html>
