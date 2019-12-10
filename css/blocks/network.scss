@@ -4,7 +4,7 @@
  justify-content: flex-end;
   width: 50%;
   @include phones {
-    
+      justify-content: center;
       align-items: center;
     
   }

@@ -39,10 +39,37 @@
   &--back {
     left: 0;
     z-index: $z-burgers__arrow;
+    @include tablets {
+      left: 2%;
+    }
+    &:hover {
+    
+      top: 48%;
+      .arrow-icon {
+        
+        width: rem(45px);
+        height: rem(45px);
+      }
+  }
   }
   &--next {
     right: -3%;
+    &:hover {
+      right: -5%;
+      top: 48%;
+      @include phones {
+        right: -7%;
+      }
+      .arrow-icon {
+        
+        width: rem(45px);
+        height: rem(45px);
+      }
   }
+    
+
+  }
+  
 }
 
 .burger__scroll-back {
@@ -77,22 +104,7 @@
   flex-direction: row;
   z-index: $z-burgers__arrow;
   
-  &:hover {
-    .burger-composition {
-      background-color: $red;
-    }
-    & .composition {
-      width: 25vw;
-       opacity: 1;
-       @include tablets {
-        width: 50vw;
-       }
-       @include phones {
-        width: 60vw;
-       }
-      
-    }
-  }
+  
   @include tablets {
     top: 2vh;
     left: 9vw;
@@ -109,7 +121,30 @@
       width: rem(80px);
       height: rem(80px);
     }
+    
+    &:hover {
+      
+       .burger-composition {
+        background-color: $red;
+        
+      }
+     
+      & ~.composition {
+        width: 25vw;
+        height: 100%;
+         opacity: 1;
+       
+         @include tablets {
+          width: 50vw;
+         }
+         @include phones {
+          display: none;
+         }
+        
+      }
+    }
   }
+
 
   & .burger-icon-title {
     @include gagalin();
@@ -156,7 +191,7 @@
 }
 
 .composition {
-  transition: opacity .7s, width .4s;
+  transition: opacity .7s, width .4s, height .8s;
   opacity: 0;
   position: relative;
   display: flex;
@@ -165,6 +200,7 @@
   background-color: rgba($color: $white, $alpha: .9);
   border-radius: 3%;
   width: 0;
+  height: 0;
   // width: 75vw;
   z-index: $z-burgers__arrow;
   padding: 6%;
@@ -173,17 +209,19 @@
     display: none;
     
   }
-  @include phones {
+  &--active {
+    @include phones {
     flex-direction: row;
     justify-content: space-between;;
     & .composition__list {
-      width: 70%;
+      width: 80%;
     }
     & .ref-close {
     display: flex;
     align-items: flex-start;
   }
   }
+}
  
 }
 .composition__list {
@@ -243,6 +281,7 @@
  
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
   @include tablets {
     width: 95%;
     height: 95%;
@@ -260,8 +299,14 @@
 .burgers__title {
   font-size: rem(63px);
   margin-bottom: 5%;
+  width: 90%;
   @include tablets {
     font-size: rem(55px);
+    margin: 0 auto;
+  }
+  @include phones {
+    font-size: rem(50px);
+    margin: 0 auto;
   }
 }
 
