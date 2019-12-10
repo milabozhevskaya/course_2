@@ -1,0 +1,83 @@
+.first {
+  background-color: $grayblack;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: $z-first;
+  display: none;
+}
+
+.first__container {
+  height: 100%;
+  
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  
+}
+
+.first__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position: absolute;
+  top: 3%;
+}
+
+.firs__menu {
+ 
+  
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+}
+
+.first__list {
+  @include ubuntu(normal);
+  font-size: rem(24px);
+  line-height: 1.67;
+  text-transform: uppercase;
+  flex-direction: column;
+  & .first__link {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.first__item {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10%;
+   
+  &:before {
+    content:"";
+    width: rem(4px);
+    height: rem(4px);
+    background-color: $white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;  
+    position: absolute;
+    top: -33%;
+    left: 50%;
+    
+  }
+  &:nth-child(1) {
+    &:before{
+      display: none;
+    }
+  }
+}

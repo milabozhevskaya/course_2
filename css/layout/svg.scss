@@ -67,3 +67,59 @@
   height: rem(30px);
   fill: $red;
 }
+.burger-icon {
+  width: rem(46px);
+  height: rem(44px);
+}
+.arrow-icon {
+  width: rem(27px);
+  height: rem(15px);
+  &-back {
+    transform: rotate(90deg);
+  }
+  &-next {
+    transform: rotate(270deg);
+  }
+}
+
+.kkal-icon {
+  width: rem(55px);
+  height: rem(55px);
+}
+
+.composition-icon {
+ 
+  &--beef {
+    width: rem(44px);
+    height: rem(39px);
+  }
+  &--buns{
+    width: rem(48px);
+    height: rem(30px);
+  }
+  &--salad {
+    width: rem(38px);
+    height: rem(38px);
+  }
+  &--sauce {
+    width: rem(41px);
+    height: rem(43px);
+  }
+  &--cucamber {
+    width: rem(43px);
+    height: rem(37px);
+  }
+  &--cheese {
+    width: rem(39px);
+    height: rem(34px);
+  }
+}
+
+.icon-close {
+  width: rem(30px);
+  height: rem(30px);
+}
+.icon-close-red {
+  width: rem(30px);
+  height: rem(30px);
+}

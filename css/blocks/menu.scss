@@ -47,6 +47,7 @@
   display:flex;
   flex-direction: row;
   height: 100%;
+  justify-content: flex-end;
 }
 
 .menu__item {
@@ -55,6 +56,7 @@
   flex-direction: row;
   justify-content: flex-end;
   &--active {
+    width: 49%;
     & .menu__name {
       color: $yellow;
       @include phones {
@@ -62,15 +64,24 @@
       }
     }
     & .menu__desc {
-        width: 50%;
+        width: 100%;
         padding-left: rem(30px);
         padding-right: rem(33px);
-        @include tablets {
-          padding: 4%;
-        }
-        @include phones {
-          display: none;
-        }
+        
+    }
+    @include tablets {
+     
+      height: 100vh;
+      width: 100%;
+    }
+    @include phones {
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      & .menu__desc {
+        padding-top: 10%;
+      }
+      z-index: $z-menu__item--active;
     }
   }
 }
@@ -153,6 +164,7 @@
   line-height: 1.71;
   background-color: rgba($color: $gray, $alpha: .9);
   display: flex;
+  flex-direction: column;
   width: 0;
   padding-top: rem(67px);
   box-sizing: border-box;
@@ -164,4 +176,13 @@
     
   }
  
+}
+
+.menu__desc-close {
+  display: none;
+  justify-content: flex-end;
+  margin-bottom: 8%;
+  @include phones {
+    display: flex;
+  }
 }

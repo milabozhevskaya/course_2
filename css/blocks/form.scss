@@ -4,6 +4,10 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
   @include phones {
     flex-direction: column;
     align-items: center;
@@ -14,6 +18,10 @@
   flex-direction: column;
   margin-right: rem(20px);
   width: 50%;
+  @include tablets {
+    margin-right: 0;
+    width: 100%;
+  }
   @include phones {
     margin-right: 0;
     width: 100%;
@@ -29,6 +37,14 @@
   flex-direction: row;
   margin-bottom: rem(15px);
   flex-wrap: nowrap;
+  @include tablets {
+    & label {
+      margin-right: 2%;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    }
   @include phones {
     & label {
       margin-right: 2%;
@@ -75,6 +91,7 @@
   border-radius: rem(3px);
   border: rem(2px) solid transparent;
   outline: none;
+  padding: rem(6px);
 
   &:focus {
     border-color: $yellow;
@@ -219,12 +236,13 @@
 
   }
   & .btn__ref {
-    text-transform: none;
+    // text-transform: none;
     @include ubuntu(light);
     font-size: rem(14px);
+    text-transform: uppercase;
     &:hover {
       background-color: $red;
-      text-transform: uppercase;
+      
     }
   }
 }
