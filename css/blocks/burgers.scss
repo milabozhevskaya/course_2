@@ -14,7 +14,7 @@
   position: relative;
   @include tablets {
     flex-direction: column;
-    padding-top: 10%;
+    // padding-top: 10%;
   }
   @include phones {
     flex-direction: column;
@@ -64,10 +64,10 @@
   }
   }
   &--next {
-    right: 0%;
+    right: -3%;
     
     &:hover {
-      right: -3%;
+      right: -6%;
       top: 48%;
    
       @include phones {
@@ -119,11 +119,11 @@
   
   
   @include tablets {
-    top: 2vh;
-    left: 9vw;
+    top: 0;
+    left: 8vw;
   }
   @include phones {
-    top: -4vh;
+    top: -3vh;
     left: 4vw;
   }
  
@@ -151,7 +151,7 @@
           width: 50vw;
          }
          @include phones {
-           width: 60vw;
+           width: 62vw;
           flex-direction: row;
           justify-content: space-between;;
           & .composition__list {
@@ -185,6 +185,7 @@
   flex-direction: column;
   align-items: center;
   opacity: .6;
+  z-index: $z-burgers__arrow;
   
   & .kkal-icon-title {
     @include gagalin();
@@ -204,12 +205,12 @@
     top: 30%;
   }
   @include tablets {
-    top: 2vh;
-    left: 85%;
+    top: 0vh;
+    left: 80%;
   }
   @include phones {
-    top: -4vh;
-    left: 85%;
+    top: -3vh;
+    left: 80%;
   }
 }
 
@@ -281,9 +282,20 @@
   // margin-right: 5%;
 
   // display: flex;
-  max-width: 100%;
+  max-width: 65%;
   max-height: 100%;
-  // margin-right: 3%;
+  margin: 0 auto;
+  display: flex;
+    // margin-right: 3%;
+    @include tablets {
+      max-width: 80%;
+      margin-bottom: 1vh;
+    }
+    @include phones {
+      max-width: 100%;
+      margin-bottom: 1vh;
+      // max-height: 50vh;
+    }
   
 }
 
@@ -293,32 +305,39 @@
  
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 92%;
   @include tablets {
-    width: 95%;
+    width: 90%;
     height: 95%;
   }
 }
 
 .burgers__price {
-  width: 60%;
+  width: 40%;
   @include tablets {
     text-align: center;
     width: 90%;
   }
+  @include phones {
+    // max-height: 40vh;
+    width: 90%;
+    text-align: center;
+  }
 }
 
 .burgers__title {
-  font-size: rem(63px);
+  font-size: rem(53px);
   margin-bottom: 5%;
-  width: 90%;
+  width: 80%;
   @include tablets {
     font-size: rem(55px);
     margin: 0 auto;
   }
   @include phones {
-    font-size: rem(50px);
+    // font-size: rem(38px);
+    font-size: 10vw;
     margin: 0 auto;
+    margin-bottom: 8%;
   }
 }
 
