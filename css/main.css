@@ -955,6 +955,40 @@ footer {
   background-image: -o-linear-gradient(bottom, #f9b43b, #eb8c38 40%, #f9b43b);
   background-image: linear-gradient(to top, #f9b43b, #eb8c38 40%, #f9b43b); }
 
+.burgers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.burgers__item {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
+  @media screen and (max-width: 768px) {
+    .burgers__item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-top: 10%; } }
+  @media screen and (max-width: 480px) {
+    .burgers__item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-top: 5%; } }
+  .burgers__item:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
 .burgers__container {
   height: 100%;
   display: -webkit-box;
@@ -978,33 +1012,6 @@ footer {
       justify-content: center;
       text-align: center; } }
 
-.burgers__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative; }
-  @media screen and (max-width: 768px) {
-    .burgers__content {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      padding-top: 10%; } }
-  @media screen and (max-width: 480px) {
-    .burgers__content {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      padding-top: 5%; } }
-
 .burgers__arrow {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1026,9 +1033,9 @@ footer {
         width: 2.8125rem;
         height: 2.8125rem; }
   .burgers__arrow--next {
-    right: -3%; }
+    right: 0%; }
     .burgers__arrow--next:hover {
-      right: -5%;
+      right: -3%;
       top: 48%; }
       @media screen and (max-width: 480px) {
         .burgers__arrow--next:hover {

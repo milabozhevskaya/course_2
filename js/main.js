@@ -77,7 +77,6 @@ firstClose.addEventListener('click', function(event) {
 
 
 
-
 ////preventDefault for reviews and burgers
 const reviews = document.querySelector('.reviews');
 const burgers = document.querySelector('.burgers');
@@ -90,4 +89,29 @@ burgers.addEventListener('click', function(event) {
   event.preventDefault();
 });
 
+
+////burgers  slider
+const burgerNext = document.querySelector('.burgers__arrow--next');
+const burgerBack = document.querySelector('.burgers__arrow--back');
+const burgersList = document.querySelector(".burgers__list");
+
+burgerNext.addEventListener("click", function(event) {
+  event.preventDefault();
+  loop('next', event);
+});
+
+burgerBack.addEventListener("click", function(event) {
+  event.preventDefault();
+  loop("back", event);
+});
+
+function loop(direction, event) {
+
+  
+  if(direction == 'next') {
+    burgersList.appendChild(burgersList.firstElementChild);
+  } else {
+    burgersList.insertBefore(burgersList.lastElementChild, burgersList.firstElementChild);
+  }
+}
 
