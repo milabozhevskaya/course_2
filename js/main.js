@@ -79,7 +79,7 @@ firstClose.addEventListener('click', function(event) {
   window.removeEventListener('scroll', noScroll);
 
   first.style.display = 'none';
-  
+
   first.addEventListener('click', function(event) {
      event.preventDefault();
   })
@@ -125,3 +125,47 @@ function loop(direction, event) {
   }
 }
 
+
+///////form
+const form = document.querySelector('#orderform');
+const btnSend = document.querySelector('.btn-send');
+
+btnSend.addEventListener('click', function(event) {
+  event.preventDefault();
+
+
+  if (validForm(form)) {
+    const data = {
+      name: form.elements.name.value,
+      phone: form.elements.phone.value,
+      comment: form.elements.comment.value,
+      to: form.elements.email.value
+    };
+   
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(JSON.stringify(data));
+  }
+
+});
+
+function validForm (formForValid) {
+  let valid = true;
+
+  if (!validField(form.elements.name)) {
+    valid = false;
+  }
+
+  if (!validField(form.elements.phone)) {
+    valid = false;
+  }
+  if (!validField(form.elements.email)) {
+    valid = false;
+  }
+  return valid;
+}
+
+function validField(field) {
+  field.nextElementSibling.textContent = field.validationMessage;
+  return field.checkValidity();
+}

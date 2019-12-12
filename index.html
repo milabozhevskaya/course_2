@@ -330,7 +330,7 @@
                     <div class="kkal-icon-title">ккал</div>
                 </div>
                 <div class="burgers__photo">
-                  <img src="img//content/nyc2.png" class="burger-photo" alt="бургер с чернилами каракатицы">
+                  <img src="img//content/cheeseburger.png" class="burger-photo" alt="бургер с чернилами каракатицы">
                 </div>
                 <div class="burgers__price">
                   <div class="title title--white burgers__title">Diner Bacon Cheese-burger</div>
@@ -936,24 +936,25 @@
       <div class="container order__container">
         <div class="title title--yellow order__title">закажите доставку</div>
         <div class="order-form">
-          <form metod="get"  id="orderform" class="form">
-           
-              <div class="form__elem">
+          <form metod=""  id="orderform" class="form">
+            <div class="form__elem">
                 <div class="form__col">
                   <div class="form__row">
                     <label class="form__block">
                         <div class="form__title">Имя</div>
-                        <input type="text" name="form__title" class="form__input">
+                        <input type="text" name="name" class="form__input" required>
+                        <div class="error" aria-label="ошибка - не ввдено имя"></div>
                     </label>
                     <label class="form__block">
                         <div class="form__title">Телефон</div>
-                        <input type="text" class="form__input">
+                        <input type="number" name="phone" class="form__input" required>
+                        <div class="error" aria-label="ошика - неправильно введен телефон"></div>
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                         <div class="form__title">Улица</div>
-                        <input type="text" class="form__input">
+                        <input type="text" name="street" class="form__input">
                     </label>
                   </div>
                   <div class="form__row form__row--four">
@@ -971,7 +972,8 @@
                     </label>
                     <label class="form__block">
                         <div class="form__title">Этаж</div>
-                        <input type="text" class="form__input">
+                        <input type="email" name="email" class="form__input" required>
+                        <div class="error" aria-label="ошибка - неправильно введен email"></div>
                     </label>
                   </div>
                 </div>  
@@ -979,7 +981,8 @@
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Текст отзыва</div>
-                      <textarea name="" class="form__input form__input--textarea"></textarea>
+                      <textarea name="comment" class="form__input form__input--textarea"></textarea>
+                      <div class="error" aria-label="ошибка - нет комментария"></div>
                     </label>
                   </div>
                   <div class="form__row form__buttomline">
@@ -1004,10 +1007,10 @@
     
                     <div class="form__row form__buttons">
                       <div class="btn">
-                        <a href="#" class="btn__ref" >Заказать</a>
+                        <a href="#" class="btn__ref btn-send" >Заказать</a>
                       </div>
                       <div class="btn">
-                        <a href="#" class="btn__ref" >Очистить</a>
+                        <a href="#" class="btn__ref btn-clear" >Очистить</a>
                       </div>
                     </div>
                   </div>

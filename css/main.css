@@ -1280,7 +1280,7 @@ footer {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  max-width: 92%; }
+  width: 92%; }
   @media screen and (max-width: 768px) {
     .burger-photo {
       max-width: 90%;
@@ -1933,6 +1933,9 @@ footer {
   @media screen and (max-width: 768px) {
     .order-form {
       width: 85%; } }
+
+.error {
+  color: #e45028; }
 
 .form__elem {
   width: 100%;
