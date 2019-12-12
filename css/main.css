@@ -1257,19 +1257,20 @@ footer {
   width: 100%; }
 
 .burgers__photo {
-  max-width: 65%;
-  max-height: 100%;
+  width: 65%;
+  -o-object-fit: cover;
+  object-fit: cover;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   @media screen and (max-width: 768px) {
     .burgers__photo {
-      max-width: 80%;
+      width: 80%;
       margin-bottom: 1vh; } }
   @media screen and (max-width: 480px) {
     .burgers__photo {
-      max-width: 100%;
+      width: 100%;
       margin-bottom: 1vh; } }
 
 .burger-photo {
@@ -1279,11 +1280,11 @@ footer {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 92%; }
+  max-width: 92%; }
   @media screen and (max-width: 768px) {
     .burger-photo {
-      width: 90%;
-      height: 95%; } }
+      max-width: 90%;
+      max-height: 95%; } }
 
 .burgers__price {
   width: 40%; }

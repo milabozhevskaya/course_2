@@ -282,17 +282,18 @@
   // margin-right: 5%;
 
   // display: flex;
-  max-width: 65%;
-  max-height: 100%;
+  width: 65%;
+  // height: 100%;
+  object-fit: cover;
   margin: 0 auto;
   display: flex;
     // margin-right: 3%;
     @include tablets {
-      max-width: 80%;
+      width: 80%;
       margin-bottom: 1vh;
     }
     @include phones {
-      max-width: 100%;
+      width: 100%;
       margin-bottom: 1vh;
       // max-height: 50vh;
     }
@@ -305,10 +306,10 @@
  
   left: 50%;
   transform: translateX(-50%);
-  width: 92%;
+  max-width: 92%;
   @include tablets {
-    width: 90%;
-    height: 95%;
+    max-width: 90%;
+    max-height: 95%;
   }
 }
 
