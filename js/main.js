@@ -132,19 +132,25 @@ const btnSend = document.querySelector('.btn-send');
 
 btnSend.addEventListener('click', function(event) {
   event.preventDefault();
+  // const data = {
+  //     name: form.elements.name.value,
+  //     phone: form.elements.phone.value,
+  //     comment: "",
+  //     to: 'mi.bozhev@gmail.com'
+  //   };
+    // console.log(data);
 
+    const formData = new FormData();
+    formData.append('name',  form.elements.name.value);
+    formData.append('phone',  form.elements.phone.value);
+    formData.append('comment',  form.elements.comment.value);
+    formData.append('to',  'mi.bozhev@gmail.com');
 
   if (validForm(form)) {
-    const data = {
-      name: form.elements.name.value,
-      phone: form.elements.phone.value,
-      comment: form.elements.comment.value,
-      to: 'lilubog@yandex.ru'
-    };
-   
+    
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-    xhr.send(JSON.stringify(data));
+    xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);
   }
 
 });
@@ -159,7 +165,9 @@ function validForm (formForValid) {
   if (!validField(form.elements.phone)) {
     valid = false;
   }
-  
+  if (!validField(form.elements.comment)) {
+    valid = false;
+  }
   return valid;
 }
 
