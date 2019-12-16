@@ -1,7 +1,0 @@
-.logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  z-index: 110;
-  margin-right: rem(10px); }

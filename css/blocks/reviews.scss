@@ -78,16 +78,14 @@
   }
   & .btn__ref {
     background-color: $gray;
-    width: 54%;
+    width: fit-content;
     transition: .4s;
     @include tablets {
       justify-content: center;
       margin: 0 auto;
-      width: 40%;
     }
     @include phones {
       justify-content: center;
-      width: 86%;
       font-size: rem(11px);
     }
           

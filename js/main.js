@@ -129,7 +129,7 @@ btnSend.addEventListener('click', function(event) {
     formData.append('name',  form.elements.name.value);
     formData.append('phone',  form.elements.phone.value);
     formData.append('comment',  form.elements.comment.value);
-    formData.append('to',  'mi.bozhev@gmail.com');
+    formData.append('to',  'mi@gmail.com');
 
   if (validForm(form)) {
     
@@ -291,12 +291,12 @@ rightArrow.onclick = right;
 
 
 ////preventDefault for reviews and burgers
-const reviews = document.querySelector('.reviews');
+// const reviews = document.querySelector('.reviews');
 const burgers = document.querySelector('.burgers');
 
-reviews.addEventListener('click', function(event) {
-  event.preventDefault();
-});
+// reviews.addEventListener('click', function(event) {
+//   event.preventDefault();
+// });
 
 burgers.addEventListener('click', function(event) {
   event.preventDefault();
@@ -357,10 +357,8 @@ const popupText = document.querySelector('.popup__content');
 const popupName = document.querySelector('.popup__name');
 const popupClose = document.querySelector('.popup__close');
 reviewsList.addEventListener('click', e => {
+  e.preventDefault();
   let elem = e.target;
-  console.log(elem);
-  console.log(elem.previousElementSibling.innerHTML);
-  console.log(elem.tagName);
 
   if (elem.tagName == 'A') {
     let modalText = elem.previousElementSibling.innerHTML;
@@ -372,7 +370,7 @@ reviewsList.addEventListener('click', e => {
 });
 
 document.addEventListener('keyup', e => {
-  let keyName = e.keyCode;
+  let keyName = e.key;
 
   if (keyName === 'Escape') {
     popup.style.display = 'none';
@@ -388,3 +386,20 @@ popupClose.addEventListener("click", function(e) {
   e.preventDefault();
   popup.style.display = 'none';
 });
+
+
+// const reviewsBtn = document.querySelector('.reviews__btn');
+// if (screen<481)
+
+
+const btnRef1 = document.querySelector('.btn__ref1');
+const btnRef2 = document.querySelector('.btn__ref2');
+const reviewsText = document.querySelector('.reviews__text')
+if (btnRef1.style.display == 'none') {
+  document.body.removeChild(btnRef1);
+}
+if (btnRef2.style.display == 'none') {
+  document.body.removeChild(btnRef2);
+  reviewsText.appendChild(btnRef1);
+
+}

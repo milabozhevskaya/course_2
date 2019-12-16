@@ -1871,7 +1871,9 @@ footer {
         justify-content: center; } }
   .reviews__text .btn__ref {
     background-color: #4a5155;
-    width: 54%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     -webkit-transition: .4s;
     -o-transition: .4s;
     transition: .4s; }
@@ -1880,14 +1882,12 @@ footer {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        margin: 0 auto;
-        width: 40%; } }
+        margin: 0 auto; } }
     @media screen and (max-width: 480px) {
       .reviews__text .btn__ref {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        width: 86%;
         font-size: 0.6875rem; } }
     .reviews__text .btn__ref:hover {
       background-color: #2f3234; }
