@@ -115,6 +115,12 @@ firstClose.addEventListener('click', function(event) {
 ///////////////////////////////    -----form-----------
 const form = document.querySelector('#orderform');
 const btnSend = document.querySelector('.btn-send');
+const btnClear = document.querySelector('.btn-clear');
+
+btnClear.addEventListener('click', function(event) {
+  event.preventDefault();
+  form.reset();  
+});
 
 btnSend.addEventListener('click', function(event) {
   event.preventDefault();
@@ -129,13 +135,12 @@ btnSend.addEventListener('click', function(event) {
     
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
-    xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
+    xhr.open('POST','https://webdev-api.loftschool.com/sendmail/fail');
     xhr.send(formData);
     xhr.addEventListener('load', () => {
-      if (xhr.response.status) {
-        
+      if ((xhr.response.status)|(xhr.response.status==0)) {
         overlayMessage(xhr.response.message);
-        
+        form.reset();
       }
     });
   }

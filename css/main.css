@@ -2592,6 +2592,7 @@ label:last-child .choose__answer{
   flex-direction: column; }
 
 .overlay__content {
+  text-align: center;
   margin: 0;
   margin-bottom: 8%;
   font-size: 0.875rem;
