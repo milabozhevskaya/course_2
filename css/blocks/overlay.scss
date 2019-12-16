@@ -1,0 +1,39 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($color: $gray, $alpha: .9);;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.overlay__container {
+  position: relative;
+  display: flex;
+  width: 25%;
+  background: $white;
+  border-radius: 4%;
+  padding: 2%;
+  color: $grayblack;
+  align-items: center;
+  flex-direction: column;
+}
+
+.overlay__content {
+  margin: 0;
+  margin-bottom: 8%;
+  font-size: rem(14px);
+  @include ubuntu(normal);
+}
+
+.overlay__close {
+  background: $red;
+  border-radius: 6%;
+  &:hover{
+    background: $reddark;
+  }
+}

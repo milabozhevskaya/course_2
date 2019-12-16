@@ -86,21 +86,7 @@ firstClose.addEventListener('click', function(event) {
 })
 
 
-
-////preventDefault for reviews and burgers
-const reviews = document.querySelector('.reviews');
-const burgers = document.querySelector('.burgers');
-
-reviews.addEventListener('click', function(event) {
-  event.preventDefault();
-});
-
-burgers.addEventListener('click', function(event) {
-  event.preventDefault();
-});
-
-
-////burgers  slider
+////burgers  slider ПРОСТОЙ БЕСКОНЕЧНЫЙ
 // const burgerNext = document.querySelector('.burgers__arrow--next');
 // const burgerBack = document.querySelector('.burgers__arrow--back');
 // const burgersList = document.querySelector(".burgers__list");
@@ -126,7 +112,7 @@ burgers.addEventListener('click', function(event) {
 // }
 
 
-///////////////////////////////form
+///////////////////////////////    -----form-----------
 const form = document.querySelector('#orderform');
 const btnSend = document.querySelector('.btn-send');
 
@@ -147,7 +133,9 @@ btnSend.addEventListener('click', function(event) {
     xhr.send(formData);
     xhr.addEventListener('load', () => {
       if (xhr.response.status) {
-        console.log(xhr.response.message);
+        
+        overlayMessage(xhr.response.message);
+        
       }
     });
   }
@@ -179,14 +167,15 @@ function validField(field) {
 /// плавный бесконечный слайдер
 let item = document.querySelectorAll('.burgers__item');
 const itemLength = item.length;
-// console.log(itemLength);
+
 const burgers__list = document.querySelector('.burgers__list');
+
 const rightArrow = document.querySelector(".burgers__arrow--back");
 const leftArrow = document.querySelector(".burgers__arrow--next");
+
 let slider = [];
 for (let i = 0; i<itemLength; i++) {
   slider[i] = item[i];
-  // console.log(slider[i]);
   item[i].remove();
 }
 let step = 0;
@@ -197,25 +186,19 @@ function burgerSlider() {
   div = slider[slider.length-1];
   div.classList.add('burgers__item');
   div.style.left = -100 + '%';
-  // console.log(div);
   burgers__list.appendChild(div); 
-  
   
   div = slider[step];
-  // div.classList.add('item');
   div.style.left = offset*100 + '%';
-  // console.log(div);
   burgers__list.appendChild(div); 
+
   div = slider[step+1];
-  // div.classList.add('item');
   div.style.left = offset*100 + 100 + '%';
-  // console.log(div);
   burgers__list.appendChild(div); 
   offset = 1;
-  
 }
+
 function burgerSliderL() {
-  console.log(step);
   if (step == (slider.length-1)) {
     step = 1;
   } else {
@@ -225,12 +208,10 @@ function burgerSliderL() {
       step = (step +2);
     }
   }
-  console.log(step);
   let div = document.createElement('li');
   div = slider[step];
   div.classList.add('burgers__item');
   div.style.left = offset*100 + '%';
-  // console.log(div);
   burgers__list.appendChild(div); 
     
   if (step == 0) {
@@ -238,16 +219,13 @@ function burgerSliderL() {
   } else {
     step = (step - 1);
   }
-  console.log(step);
   offset = 1;
 }
 
 function left() {
   leftArrow.onclick = null;
-  // 
   let slider2 = document.querySelectorAll('.burgers__item');
   let offset2 = -1;
-  // console.log(slider2.length);
   for (let i = 0; i<slider2.length; i++) {
     slider2[i].style.left = offset2*100 - 100 + '%';
     offset2 ++;
@@ -257,11 +235,9 @@ function left() {
     burgerSliderL();
     leftArrow.onclick = left;
   }, 600);
-  
 }
 
 function burgerSliderR() {
-  console.log(step);
   if (step == 0) {
     step = (slider.length-2);
   } else {
@@ -271,20 +247,17 @@ function burgerSliderR() {
       step = (step -2);
     }
   }
-  console.log(step);
   let offset = -1;
   let div = document.createElement('li');
   div = slider[step];
   div.classList.add('burgers__item');
   div.style.left = offset*100 + '%';
-  // console.log(div);
   burgers__list.insertBefore(div, burgers__list.firstElementChild);
   if (step == (slider.length-1)) {
       step = 0;
    } else {
      step = (step+1);
    }
-  console.log(step);
   offset = 1;
 }
 
@@ -301,14 +274,75 @@ function right() {
   setTimeout(function() {
     slider2[(slider2.length-1)].remove();
      burgerSliderR();
-    rightArrow.onclick = right;
+     rightArrow.onclick = right;
   }, 600);
 }
-
 
 burgerSlider();
 step = 0;
 
 leftArrow.onclick = left;
 rightArrow.onclick = right;
+
+
+////preventDefault for reviews and burgers
+const reviews = document.querySelector('.reviews');
+const burgers = document.querySelector('.burgers');
+
+reviews.addEventListener('click', function(event) {
+  event.preventDefault();
+});
+
+burgers.addEventListener('click', function(event) {
+  event.preventDefault();
+});
+
+
+//////////////////    --------OVERLAY------------
+const template = document.querySelector('#overlayTemp').innerHTML;
+const overlay = createOverlay(template);
+
+function overlayMessage(message) {
+  overlay.open();
+  overlay.setContent(message);
+  
+  
+}
+function createOverlay(template) {
+  
+  const fragment = document.createElement('div');
+
+  
+  fragment.innerHTML = template;
+  const overlayElement = fragment.querySelector(".overlay");
+  const contentElement = fragment.querySelector(".overlay__content");
+  const closeElement = fragment.querySelector(".overlay__close");
+
+  overlayElement.addEventListener("click", e => {
+    if (e.target === overlayElement) {
+      closeElement.click();
+    }
+  });
+
+  closeElement.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.body.removeChild(overlayElement);
+  });
+
+  return {
+    open() {
+       
+      document.body.appendChild(overlayElement);
+     
+    },
+    close() {
+      
+      closeElement.click();
+    },
+    setContent(message) {
+      contentElement.innerHTML = message;
+    },
+  };
+}
+
 

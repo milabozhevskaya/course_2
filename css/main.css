@@ -2554,3 +2554,51 @@ label:last-child .choose__answer{
     left: 50%; }
   .first__item:nth-child(1):before {
     display: none; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(74, 81, 85, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 10000; }
+
+.overlay__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  background: #fff;
+  border-radius: 4%;
+  padding: 2%;
+  color: #2f3234;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.overlay__content {
+  margin: 0;
+  margin-bottom: 8%;
+  font-size: 0.875rem;
+  font-family: 'Ubuntu',Helvetica,sans-serif; }
+
+.overlay__close {
+  background: #e45028;
+  border-radius: 6%; }
+  .overlay__close:hover {
+    background: #c1401e; }
