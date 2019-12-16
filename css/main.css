@@ -967,6 +967,12 @@ footer {
   overflow: hidden;
   /*   will-change: right;
   transition: right .3s; */ }
+  @media screen and (max-width: 768px) {
+    .burgers__list {
+      height: 90vh; } }
+  @media screen and (max-width: 480px) {
+    .burgers__list {
+      height: 90vh; } }
 
 .burgers__item {
   -webkit-box-orient: horizontal;
@@ -992,18 +998,19 @@ footer {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column; } }
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   @media screen and (max-width: 480px) {
     .burgers__item {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      padding-top: 5%; } }
-  .burgers__item:first-child {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .burgers__container {
   height: 100%;
@@ -1018,6 +1025,19 @@ footer {
   position: relative;
   max-width: 62.5rem; }
   @media screen and (max-width: 768px) {
+    .burgers__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
+  @media screen and (max-width: 480px) {
     .burgers__container {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -1107,7 +1127,7 @@ footer {
       left: 8vw; } }
   @media screen and (max-width: 480px) {
     .burgers__composition {
-      top: -3vh;
+      top: 2vh;
       left: 4vw; } }
   .burgers__composition .burgers__icon-burger {
     width: 5.625rem;
@@ -1188,7 +1208,7 @@ footer {
       left: 80%; } }
   @media screen and (max-width: 480px) {
     .burgers__icon-kkal {
-      top: -3vh;
+      top: 2vh;
       left: 80%; } }
 
 .composition {
@@ -1284,10 +1304,11 @@ footer {
   @media screen and (max-width: 768px) {
     .burgers__photo {
       width: 80%;
-      margin-bottom: 1vh; } }
+      margin-bottom: 1vh;
+      max-height: 72%; } }
   @media screen and (max-width: 480px) {
     .burgers__photo {
-      width: 100%;
+      width: 96%;
       margin-bottom: 1vh; } }
 
 .burger-photo {
@@ -1389,6 +1410,9 @@ footer {
 .burgers__button {
   position: relative;
   top: 0.9375rem; }
+  @media screen and (max-width: 768px) {
+    .burgers__button {
+      top: 0.3125rem; } }
   @media screen and (max-width: 480px) {
     .burgers__button {
       top: 18%; } }
