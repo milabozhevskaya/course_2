@@ -142,8 +142,14 @@ btnSend.addEventListener('click', function(event) {
   if (validForm(form)) {
     
     const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
     xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
     xhr.send(formData);
+    xhr.addEventListener('load', () => {
+      if (xhr.response.status) {
+        console.log(xhr.response.message);
+      }
+    });
   }
 
 });
