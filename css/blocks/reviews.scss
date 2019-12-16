@@ -66,9 +66,31 @@
   transition: opacity .7s;
   & .btn__ref2 {
     display: none;
+    
+    transition: .4s;
+    @include tablets {
+      justify-content: center;
+    }
+    @include phones {
+      justify-content: center;
+    }
+    
   }
   & .btn__ref {
     background-color: $gray;
+    width: 54%;
+    transition: .4s;
+    @include tablets {
+      justify-content: center;
+      margin: 0 auto;
+      width: 40%;
+    }
+    @include phones {
+      justify-content: center;
+      width: 86%;
+      font-size: rem(11px);
+    }
+    
        
       &:hover {
         background-color: $graydark;
@@ -85,17 +107,7 @@
   & p {
     margin-bottom: rem(12px);
   }
-  & .btn {
-    
-    transition: .4s;
-    @include tablets {
-      justify-content: center;
-    }
-    @include phones {
-      justify-content: center;
-    }
-    
-}
+  
 @include tablets {
   padding: 6%;
  

@@ -350,4 +350,41 @@ function createOverlay(template) {
   };
 }
 
+///////////////// POP-UP
+const reviewsList = document.querySelector('.reviews__list');
+const popup = document.querySelector('.popup');
+const popupText = document.querySelector('.popup__content');
+const popupName = document.querySelector('.popup__name');
+const popupClose = document.querySelector('.popup__close');
+reviewsList.addEventListener('click', e => {
+  let elem = e.target;
+  console.log(elem);
+  console.log(elem.previousElementSibling.innerHTML);
+  console.log(elem.tagName);
 
+  if (elem.tagName == 'A') {
+    let modalText = elem.previousElementSibling.innerHTML;
+    let modalName = elem.previousElementSibling.previousElementSibling.innerHTML;
+    popupText.innerHTML = modalText;
+    popupName.innerHTML = modalName;
+    popup.style.display = 'block';
+  }
+});
+
+document.addEventListener('keyup', e => {
+  let keyName = e.keyCode;
+
+  if (keyName === 'Escape') {
+    popup.style.display = 'none';
+  }
+});
+
+popup.addEventListener("click", e => {
+  if (e.target === popup) {
+    popup.style.display = 'none';
+  }
+});
+popupClose.addEventListener("click", function(e) {
+  e.preventDefault();
+  popup.style.display = 'none';
+});

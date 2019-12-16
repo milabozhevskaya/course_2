@@ -16,11 +16,18 @@
   display: flex;
   width: 25%;
   background: $white;
-  border-radius: 4%;
+  border-radius: rem(6px);
   padding: 2%;
   color: $grayblack;
   align-items: center;
   flex-direction: column;
+
+  @include tablets {
+    width: 40%;
+  }
+  @include phones {
+    width: 40%;
+  }
 }
 
 .overlay__content {
