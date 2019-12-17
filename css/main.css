@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Ubuntu';
   src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
@@ -985,7 +986,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 96%;
   height: 100%;
   position: absolute;
   -webkit-transition: all ease .6s;
@@ -1023,7 +1024,7 @@ footer {
   -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
-  max-width: 62.5rem; }
+  width: 100%; }
   @media screen and (max-width: 768px) {
     .burgers__container {
       -webkit-box-orient: vertical;
@@ -1058,21 +1059,23 @@ footer {
   -ms-transform: translate(-50%);
   transform: translate(-50%); }
   .burgers__arrow--back {
-    left: 0;
-    z-index: 20; }
+    left: 3%;
+    z-index: 20;
+    top: 48%; }
     @media screen and (max-width: 768px) {
       .burgers__arrow--back {
-        left: 2%; } }
+        left: 6%; } }
     .burgers__arrow--back:hover {
-      top: 48%; }
+      top: 46%; }
       .burgers__arrow--back:hover .arrow-icon {
         width: 2.8125rem;
         height: 2.8125rem; }
   .burgers__arrow--next {
-    right: -3%; }
+    right: 1%;
+    top: 48%; }
     .burgers__arrow--next:hover {
-      right: -6%;
-      top: 48%; }
+      right: -1%;
+      top: 46%; }
       @media screen and (max-width: 480px) {
         .burgers__arrow--next:hover {
           right: -7%; } }
@@ -1854,21 +1857,6 @@ footer {
   -webkit-transition: opacity .7s;
   -o-transition: opacity .7s;
   transition: opacity .7s; }
-  .reviews__text .btn__ref2 {
-    display: none;
-    -webkit-transition: .4s;
-    -o-transition: .4s;
-    transition: .4s; }
-    @media screen and (max-width: 768px) {
-      .reviews__text .btn__ref2 {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; } }
-    @media screen and (max-width: 480px) {
-      .reviews__text .btn__ref2 {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; } }
   .reviews__text .btn__ref {
     background-color: #4a5155;
     width: -webkit-fit-content;
@@ -1888,9 +1876,14 @@ footer {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        font-size: 0.6875rem; } }
+        font-size: 0.75rem; } }
     .reviews__text .btn__ref:hover {
       background-color: #2f3234; }
+    .reviews__text .btn__ref:after {
+      content: 'Подробнее'; }
+      @media screen and (max-width: 480px) {
+        .reviews__text .btn__ref:after {
+          content: 'Читать отзыв'; } }
   .reviews__text .reviews__name {
     margin-bottom: 1rem;
     font-family: 'gagalinregular',Helvetica,sans-serif;
@@ -1923,14 +1916,9 @@ footer {
       .reviews__text p {
         display: none; }
       .reviews__text .reviews__name {
-        font-size: 1.5625rem;
-        line-height: 1.2; }
-      .reviews__text .btn__ref1 {
-        display: none; }
-      .reviews__text .btn__ref2 {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; } }
+        font-size: 1.4375rem;
+        line-height: 1.2;
+        margin-bottom: 6%; } }
 
 .order {
   height: 100vh;
@@ -2655,7 +2643,8 @@ label:last-child .choose__answer{
       width: 70%; } }
   @media screen and (max-width: 480px) {
     .popup__container {
-      width: 90%; } }
+      width: 93%;
+      padding: 3% 3%; } }
 
 .popup__name {
   font-family: 'gagalinregular',Helvetica,sans-serif;

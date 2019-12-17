@@ -64,18 +64,7 @@
   padding-left: 12%;
   padding-right: 8%;
   transition: opacity .7s;
-  & .btn__ref2 {
-    display: none;
-    
-    transition: .4s;
-    @include tablets {
-      justify-content: center;
-    }
-    @include phones {
-      justify-content: center;
-    }
-    
-  }
+
   & .btn__ref {
     background-color: $gray;
     width: fit-content;
@@ -86,11 +75,18 @@
     }
     @include phones {
       justify-content: center;
-      font-size: rem(11px);
+      font-size: rem(12px);
     }
           
       &:hover {
         background-color: $graydark;
+      
+    }
+    &:after {
+      content: 'Подробнее';
+      @include phones {
+        content: 'Читать отзыв';
+      }
       
     }
   }
@@ -130,15 +126,10 @@
     display: none;
   }
   .reviews__name {
-    font-size: rem(25px);
+    font-size: rem(23px);
     line-height: 1.2;
+    margin-bottom: 6%;
 
-  }
-  .btn__ref1 {
-    display: none;
-  }
-  .btn__ref2 {
-    display: flex;
   }
 }
 }

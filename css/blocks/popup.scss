@@ -24,7 +24,8 @@
     width: 70%;
   }
   @include phones {
-    width: 90%;
+    width: 93%;
+    padding: 3% 3%;
   }
 }
 .popup__name {

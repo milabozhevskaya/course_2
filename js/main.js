@@ -393,13 +393,14 @@ popupClose.addEventListener("click", function(e) {
 
 
 const btnRef1 = document.querySelector('.btn__ref1');
+console.log(btnRef1);
 const btnRef2 = document.querySelector('.btn__ref2');
-const reviewsText = document.querySelector('.reviews__text')
+const reviewsText = document.querySelector('.reviews__text');
 if (btnRef1.style.display == 'none') {
   document.body.removeChild(btnRef1);
 }
-if (btnRef2.style.display == 'none') {
-  document.body.removeChild(btnRef2);
-  reviewsText.appendChild(btnRef1);
+// if (btnRef2.style.display == 'none') {
+//   document.body.removeChild(btnRef2);
+//   reviewsText.appendChild(btnRef1);
 
-}
+// }
