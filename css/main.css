@@ -1078,7 +1078,7 @@ footer {
       top: 46%; }
       @media screen and (max-width: 480px) {
         .burgers__arrow--next:hover {
-          right: -7%; } }
+          right: -3%; } }
       .burgers__arrow--next:hover .arrow-icon {
         width: 2.8125rem;
         height: 2.8125rem; }
