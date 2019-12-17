@@ -289,14 +289,7 @@ step = 0;
 leftArrow.onclick = left;
 rightArrow.onclick = right;
 
-
-////preventDefault for reviews and burgers
-// const reviews = document.querySelector('.reviews');
 const burgers = document.querySelector('.burgers');
-
-// reviews.addEventListener('click', function(event) {
-//   event.preventDefault();
-// });
 
 burgers.addEventListener('click', function(event) {
   event.preventDefault();
@@ -310,6 +303,7 @@ const overlay = createOverlay(template);
 function overlayMessage(message) {
   overlay.open();
   overlay.setContent(message);
+  document.body.style.overflow = "hidden";
   
   
 }
@@ -326,12 +320,14 @@ function createOverlay(template) {
   overlayElement.addEventListener("click", e => {
     if (e.target === overlayElement) {
       closeElement.click();
+      document.body.style.overflow = "initial";
     }
   });
 
   closeElement.addEventListener("click", function(e) {
     e.preventDefault();
     document.body.removeChild(overlayElement);
+    document.body.style.overflow = "initial";
   });
 
   return {
@@ -366,6 +362,7 @@ reviewsList.addEventListener('click', e => {
     popupText.innerHTML = modalText;
     popupName.innerHTML = modalName;
     popup.style.display = 'block';
+    document.body.style.overflow = "hidden";
   }
 });
 
@@ -374,33 +371,19 @@ document.addEventListener('keyup', e => {
 
   if (keyName === 'Escape') {
     popup.style.display = 'none';
+    document.body.style.overflow = "initial";
   }
 });
 
 popup.addEventListener("click", e => {
   if (e.target === popup) {
     popup.style.display = 'none';
+    document.body.style.overflow = "initial";
   }
 });
 popupClose.addEventListener("click", function(e) {
   e.preventDefault();
   popup.style.display = 'none';
+  document.body.style.overflow = "initial";
 });
 
-
-// const reviewsBtn = document.querySelector('.reviews__btn');
-// if (screen<481)
-
-
-const btnRef1 = document.querySelector('.btn__ref1');
-console.log(btnRef1);
-const btnRef2 = document.querySelector('.btn__ref2');
-const reviewsText = document.querySelector('.reviews__text');
-if (btnRef1.style.display == 'none') {
-  document.body.removeChild(btnRef1);
-}
-// if (btnRef2.style.display == 'none') {
-//   document.body.removeChild(btnRef2);
-//   reviewsText.appendChild(btnRef1);
-
-// }
