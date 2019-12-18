@@ -186,16 +186,36 @@ formPhoneValid.addEventListener('keydown', e => {
   let keyName = e.key;
 
   if (((keyName >= '0' && keyName <= "9") || (keyName ==='-')) && (valueReturn.length < 16)) {
-    console.log(keyName);
-    console.log(valueReturn);
     valueReturn = valueReturn + keyName;
-    console.log(valueReturn);
     formPhoneValid.value.reset();
     return formPhoneValid.value = valueReturn;
   } else {
     if (keyName === "Backspace") {
       valueReturn.pop();
       return formPhoneValid.value = valueReturn;
+    }
+    // valueReturn = valueReturn + '';
+    // return formPhoneValid.value = valueReturn;
+    return e.preventDefault();
+  }
+});
+
+
+
+////////проверка ввода этажа
+let formFloorValid = document.querySelector('.form__floor');
+let valueReturnFloor = '';
+formFloorValid.addEventListener('keydown', e => {
+  let keyName = e.key;
+
+  if (((keyName >= '0' && keyName <= "9") || (keyName ==='-')) && (valueReturn.length < 16)) {
+    valueReturnFloor = valueReturnFloor + keyName;
+    formFloorValid.value.reset();
+    return formFloorValid.value = valueReturnFloor;
+  } else {
+    if (keyName === "Backspace") {
+      valueReturnFloor.pop();
+      return formFloorValid.value = valueReturnFloor;
     }
     // valueReturn = valueReturn + '';
     // return formPhoneValid.value = valueReturn;
