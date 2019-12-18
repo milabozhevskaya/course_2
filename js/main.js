@@ -168,6 +168,20 @@ function validField(field) {
   return field.checkValidity();
 }
 
+//////////////валидация поля ввода телефона
+const formPhoneValid = document.querySelector('.form__phone');
+let valueReturn = '';
+formPhoneValid.addEventListener('keyup', e => {
+  let keyName = e.key;
+
+  if (((keyName >= '0') && (keyName <= "9") || (keyName ==='-')) && (valueReturn.length < 16)) {
+    valueReturn = valueReturn + keyName;
+    return formPhoneValid.value = valueReturn;
+  } else {
+    valueReturn = valueReturn + '';
+    return formPhoneValid.value = valueReturn;
+  }
+});
 /////////////////////////////////////////////////////////////
 /// плавный бесконечный слайдер
 let item = document.querySelectorAll('.burgers__item');
