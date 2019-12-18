@@ -168,22 +168,60 @@ function validField(field) {
   return field.checkValidity();
 }
 
+
+
+
+
+
+// <script>
+// function checkPhoneKey(key) {
+//   return (key >= '0' && key <= '9') || key == '+' || key == '(' || key == ')' || key == '-';
+// }
+// </script>
+// <input onkeydown="return checkPhoneKey(event.key)" placeholder="Введите телефон" type="tel"></input>;
 //////////////валидация поля ввода телефона
-const formPhoneValid = document.querySelector('.form__phone');
+let formPhoneValid = document.querySelector('.form__phone');
 let valueReturn = '';
-formPhoneValid.addEventListener('keyup', e => {
+formPhoneValid.addEventListener('keydown', e => {
   let keyName = e.key;
 
-  if (((keyName >= '0') && (keyName <= "9") || (keyName ==='-')) && (valueReturn.length < 16)) {
+  if (((keyName >= '0' && keyName <= "9") || (keyName ==='-')) && (valueReturn.length < 16)) {
+    console.log(keyName);
+    console.log(valueReturn);
     valueReturn = valueReturn + keyName;
+    console.log(valueReturn);
+    formPhoneValid.value.reset();
     return formPhoneValid.value = valueReturn;
   } else {
     if (keyName === "Backspace") {
       valueReturn.pop();
       return formPhoneValid.value = valueReturn;
     }
-    valueReturn = valueReturn + '';
-    return formPhoneValid.value = valueReturn;
+    // valueReturn = valueReturn + '';
+    // return formPhoneValid.value = valueReturn;
+    return e.preventDefault();
+  }
+});
+
+
+//////////////валидация поля ввода квартиры
+let formFlatValid = document.querySelector('.form__flat');
+let valueReturnFlat = '';
+formFlatValid.addEventListener('keydown', e => {
+  let keyNameFlat = e.key;
+
+  if (keyNameFlat >= '0' && keyNameFlat <= "9") {
+    valueReturnFlat = valueReturnFlat + keyNameFlat;
+    formFlatValid.value.reset();
+    return formFlatValid.value = valueReturnFlat;
+  } else {
+    if (keyNameFlat === "Backspace") {
+      valueReturnFlat.pop();
+      return formFlatValid.value = valueReturnFlat;
+    }
+    // valueReturn = valueReturn + '';
+    // return formPhoneValid.value = valueReturn;
+    return e.preventDefault();
   }
 });
 /////////////////////////////////////////////////////////////
