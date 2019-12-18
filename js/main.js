@@ -178,6 +178,10 @@ formPhoneValid.addEventListener('keyup', e => {
     valueReturn = valueReturn + keyName;
     return formPhoneValid.value = valueReturn;
   } else {
+    if (keyName === "Backspace") {
+      valueReturn.pop();
+      return formPhoneValid.value = valueReturn;
+    }
     valueReturn = valueReturn + '';
     return formPhoneValid.value = valueReturn;
   }
