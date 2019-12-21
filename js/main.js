@@ -463,3 +463,105 @@ popupClose.addEventListener("click", function(e) {
   document.body.style.overflow = "initial";
 });
 
+
+
+
+
+
+///////////one page scroll
+const pages = $(".page");
+$(document).ready(() => {
+  $('.page').first().addClass('page--active')
+});
+const fixDat = $(".menu-fix__dat");
+$(document).ready(() => {
+  $('.menu-fix__dat').first().addClass('menu-fix__dat--active')
+});
+
+const display = $('.maincontent');
+let inScroll = false;
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const performTransition = sectionEq => {
+  if (inScroll) return;
+    inScroll = true;
+    const position = sectionEq * -100;
+
+  pages.eq(sectionEq).addClass('page--active').siblings().removeClass("page--active");
+
+
+  display.css({
+    transform: `translateY(${position}%)`
+  });
+
+  setTimeout(() => {
+    inScroll = false;
+
+    $('.menu-fix__dat--active').removeClass('menu-fix__dat--active');
+    fixDat.eq(sectionEq).addClass("menu-fix__dat--active");
+  }, 500); 
+};
+
+const scrollToSection = direction => {
+  const activeSection = pages.filter('.page--active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+if (direction === "next" && nextSection.length) {
+  performTransition(nextSection.index());
+}
+
+if (direction === "prev" && prevSection.length) {
+  performTransition(prevSection.index());
+}
+
+};
+
+
+$(window).on("wheel", e => {
+
+  const deltaY = e.originalEvent.deltaY;
+  // console.log(deltaY);
+
+  if (deltaY > 0) {
+    // console.log('next');
+    scrollToSection("next");
+  }
+
+  if (deltaY < 0) {
+    scrollToSection("prev");
+
+  }
+});
+
+$(document).on('keydown', e => {
+  const tagName = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
+  if (userTypingInInputs) return;
+  switch(e.keyCode) {
+    case 38:
+      scrollToSection('prev');
+      break;
+    case 40:
+      scrollToSection('next');
+      break;
+
+  };
+});
+
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+  const target = $this.attr("data-scroll-to");
+  performTransition(target);
+});
+if (isMobile) {
+  $("body").swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+    const scrollToSections = direction === "up" ? "next" : "prev";
+  
+    scrollToSection(scrollToSections);
+  }
+  });
+}
