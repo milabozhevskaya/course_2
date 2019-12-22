@@ -570,3 +570,85 @@ if (isMobile) {
   }
   });
 }
+
+
+
+
+/////////////////     PLAYER
+
+let player = document.getElementsByTagName('video')[0];
+player.volume = 0.1;
+$('.player__start').on("click", e => {
+  const btn = $(e.currentTarget);
+  onPlayPause(btn);
+});
+
+$('#myvideo').on("click", e => {
+  const btn = $('.player__start');
+  onPlayPause(btn);
+});
+
+function onPlayPause(btn) {
+  if (btn.hasClass('paused')) {
+    player.pause();
+    btn.removeClass('paused');
+
+  } else {
+    player.play();
+    btn.addClass('paused');
+  }
+}
+const formatTime = timeSec => {
+  const roundTime = Math.round(timeSec);
+  const minutes = Math.floor(roundTime / 60);
+  const seconds = roundTime - minutes *60;
+  const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+  return `${minutes}:${formattedSeconds}`;
+}
+if (player.readyState) {onPlayReady();};
+
+function onPlayReady() {
+  let interval;
+  let durationSec = player.duration;
+
+  if (typeof interval !== "undefined") {
+    clearInterval(interval);
+  }
+  interval = setInterval(() => {
+    const compleatedSec = player.currentTime;
+    const compleatedPersent = (compleatedSec / durationSec) * 100;
+    $('.player__playback-button').css({
+      left: `${compleatedPersent}%`
+    });
+
+    $('.player__duration-completed').text(formatTime(compleatedSec));
+
+  }, 1000);
+
+  $('.player__duration-estimate').text(formatTime(durationSec));
+  console.log(durationSec);
+};
+
+$('.player__splash').on('click', e => {
+  player.play();
+  $('.player__start').addClass('paused');
+  $('.player__wrapper').addClass('active');
+});
+
+
+$('.player__playback').on('click', e => {
+  const bar = $(e.currentTarget);
+  const newButtonPosition = e.pageX - bar.offset().left;
+  const buttonPosPersent = (newButtonPosition / bar.width()) * 100;
+
+  const newPlayerTimeSec = (player.duration / 100) * buttonPosPersent;
+  console.log(newPlayerTimeSec);
+
+  player.currentTime = newPlayerTimeSec;
+  $('.player__playback-button').css({
+    
+    left: `${buttonPosPersent}%`
+  });
+});
+
+const playerButton = $()
