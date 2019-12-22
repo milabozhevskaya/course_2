@@ -486,6 +486,8 @@ const isMobile = md.mobile();
 const performTransition = sectionEq => {
   if (inScroll) return;
     inScroll = true;
+    const transitionNext = 400;
+
     const position = sectionEq * -100;
 
   pages.eq(sectionEq).addClass('page--active').siblings().removeClass("page--active");
@@ -500,36 +502,37 @@ const performTransition = sectionEq => {
 
     $('.menu-fix__dat--active').removeClass('menu-fix__dat--active');
     fixDat.eq(sectionEq).addClass("menu-fix__dat--active");
-  }, 500); 
+  }, transitionNext); 
 };
 
-const scrollToSection = direction => {
+const scroller = () => {
   const activeSection = pages.filter('.page--active');
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
-if (direction === "next" && nextSection.length) {
-  performTransition(nextSection.index());
-}
 
-if (direction === "prev" && prevSection.length) {
-  performTransition(prevSection.index());
-}
+  return {
+    next() {
+      if (nextSection.length) performTransition(nextSection.index());
+    },
+    prev() {
+      if (prevSection.length)  performTransition(prevSection.index());
+    }
+  };
 
 };
-
 
 $(window).on("wheel", e => {
 
   const deltaY = e.originalEvent.deltaY;
   // console.log(deltaY);
-
+  const scrollToSection = scroller()
   if (deltaY > 0) {
     // console.log('next');
-    scrollToSection("next");
+    scrollToSection.next();
   }
 
   if (deltaY < 0) {
-    scrollToSection("prev");
+    scrollToSection.prev();
 
   }
 });
@@ -537,13 +540,15 @@ $(window).on("wheel", e => {
 $(document).on('keydown', e => {
   const tagName = e.target.tagName.toLowerCase();
   const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
+  const windowScroller = scroller();
+  
   if (userTypingInInputs) return;
   switch(e.keyCode) {
     case 38:
-      scrollToSection('prev');
+      windowScroller.prev();
       break;
     case 40:
-      scrollToSection('next');
+      windowScroller.next();
       break;
 
   };
