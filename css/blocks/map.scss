@@ -3,58 +3,93 @@
   position: relative;
   flex-direction: column;
   
+  #map-yandex {
+    height: 100%;
+    width: 100%;
+  }
   
 }
-.map__img {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+// .map__img {
+//   height: 100%;
+//   width: 100%;
+//   overflow: hidden;
+// }
+// .map__pic {
+//   display: block;
+//   height: 100%;
+//   width: 100%;
+//   position: relative;
+//   object-fit: cover;
+  
+// }
+
+// .map-marker-icon {
+  
+//   &--bol {
+//     top: rem(175px);
+//     left: rem(524px);
+//     @include tablets {
+//     top: 28%;
+//     left: 50%;
+//     }
+//   }
+
+//   &--nev {
+//     top: rem(280px);
+//     left: rem(660px);
+//     @include tablets {
+//       top: 21%;
+//       left: 77%;
+//     }
+//   }
+
+//   &--cudr {
+//     top: rem(398px);
+//     left: rem(878px);
+//     @include tablets {
+//       top: 47%;
+//       left: 91%;
+//     }
+//     }
+  
+
+//   &--mosk {
+//     top: rem(500px);
+//     left: rem(529px);
+//     @include tablets {
+//       left: 49%;
+//       top: 61%;
+//     }
+//   }
+// }
+
+
+
+.map__hint {
+  padding: 20px;
+  min-height: 55px;
+  min-width: 195px;
+  font-size: 20px;
+line-height: 1;
+color: #ffffff;
+  background-color: #f9b43b;
+// background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+border-radius: 20px;
 }
-.map__pic {
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  object-fit: cover;
-  
+
+.map__balloon {
+	padding: 20px;
+	font-size: 30px;
+	line-height: 1;
+	color: #ffffff;
+	background-color: #f9b43b;
+	// background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+	border-radius: 20px;
 }
 
-.map-marker-icon {
-  
-  &--bol {
-    top: rem(175px);
-    left: rem(524px);
-    @include tablets {
-    top: 28%;
-    left: 50%;
-    }
-  }
 
-  &--nev {
-    top: rem(280px);
-    left: rem(660px);
-    @include tablets {
-      top: 21%;
-      left: 77%;
-    }
-  }
-
-  &--cudr {
-    top: rem(398px);
-    left: rem(878px);
-    @include tablets {
-      top: 47%;
-      left: 91%;
-    }
-    }
-  
-
-  &--mosk {
-    top: rem(500px);
-    left: rem(529px);
-    @include tablets {
-      left: 49%;
-      top: 61%;
-    }
-  }
+.map__burger-image {
+	float: right;
+	height: 100px;
+	width: 100px;
 }

@@ -2456,51 +2456,32 @@ label:last-child .choose__answer{
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
+  .map #map-yandex {
+    height: 100%;
+    width: 100%; }
 
-.map__img {
-  height: 100%;
-  width: 100%;
-  overflow: hidden; }
+.map__hint {
+  padding: 20px;
+  min-height: 55px;
+  min-width: 195px;
+  font-size: 20px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #f9b43b;
+  border-radius: 20px; }
 
-.map__pic {
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  -o-object-fit: cover;
-  object-fit: cover; }
+.map__balloon {
+  padding: 20px;
+  font-size: 30px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #f9b43b;
+  border-radius: 20px; }
 
-.map-marker-icon--bol {
-  top: 10.9375rem;
-  left: 32.75rem; }
-  @media screen and (max-width: 768px) {
-    .map-marker-icon--bol {
-      top: 28%;
-      left: 50%; } }
-
-.map-marker-icon--nev {
-  top: 17.5rem;
-  left: 41.25rem; }
-  @media screen and (max-width: 768px) {
-    .map-marker-icon--nev {
-      top: 21%;
-      left: 77%; } }
-
-.map-marker-icon--cudr {
-  top: 24.875rem;
-  left: 54.875rem; }
-  @media screen and (max-width: 768px) {
-    .map-marker-icon--cudr {
-      top: 47%;
-      left: 91%; } }
-
-.map-marker-icon--mosk {
-  top: 31.25rem;
-  left: 33.0625rem; }
-  @media screen and (max-width: 768px) {
-    .map-marker-icon--mosk {
-      left: 49%;
-      top: 61%; } }
+.map__burger-image {
+  float: right;
+  height: 100px;
+  width: 100px; }
 
 .footer {
   width: 100%;
