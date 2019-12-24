@@ -736,7 +736,7 @@ function init() {
 var clusterer = new ymaps.Clusterer ({
   clusterIcons: [
     {
-      href: '../img/content/burger.png',
+      href: 'img/content/burger.png',
       size: [100, 100],
       offset: [-50, -50]
     }
