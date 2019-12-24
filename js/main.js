@@ -608,6 +608,7 @@ function onPlayPause(btn) {
   } else {
     player.play();
     btn.addClass('paused');
+    $('.player__wrapper').addClass('active');
   }
 }
 const formatTime = timeSec => {
