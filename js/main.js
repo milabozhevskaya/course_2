@@ -1,3 +1,5 @@
+    ;(function () {    
+    
     /////////section menu acko        
     const menu = document.querySelector(".menu");
     const menuItem = document.querySelectorAll('.menu__item');
@@ -62,7 +64,13 @@ const firstClose = document.querySelector('.first__close');
 function noScroll() {
   window.scrollTo(0, 0);
 }
-
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+  const target = $this.attr("data-scroll-to");
+  performTransition(target);
+  first.style.display = 'none';
+});
 
 hamburger.addEventListener('click', function(event) {
   event.preventDefault();
@@ -82,6 +90,7 @@ firstClose.addEventListener('click', function(event) {
 
   first.addEventListener('click', function(event) {
      event.preventDefault();
+     
   })
 })
 
@@ -469,6 +478,9 @@ popupClose.addEventListener("click", function(e) {
 
 
 ///////////one page scroll
+var generateDats = function () {
+
+}
 const pages = $(".page");
 $(document).ready(() => {
   $('.page').first().addClass('page--active')
@@ -735,3 +747,5 @@ map.geoObjects.add(clusterer);
 // map.geoObjects.add(placemark);
 clusterer.add(geoObjects);
 }
+
+    }) ()
