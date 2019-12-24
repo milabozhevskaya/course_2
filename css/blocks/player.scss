@@ -13,10 +13,14 @@
 
 #myvideo {
   width: 70%;
-  height: 50%;
+  height: 60%;
   @include tablets {
-    width: 90%;
-    height: 60%;
+    width: 100%;
+    height: 70%;
+  }
+  @include phones {
+    width: 100%;
+    height: 70%;
   }
 }
 
