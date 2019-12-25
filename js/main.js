@@ -492,7 +492,6 @@ const display = $('.maincontent');
 let inScroll = false;
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
-// alert(isMobile);
 
 const performTransition = sectionEq => {
   if (inScroll) return;
@@ -535,10 +534,8 @@ const scroller = () => {
 $(window).on("wheel", e => {
 
   const deltaY = e.originalEvent.deltaY;
-  // console.log(deltaY);
   const scrollToSection = scroller()
   if (deltaY > 0) {
-    // console.log('next');
     scrollToSection.next();
   }
 
@@ -572,39 +569,21 @@ $("[data-scroll-to]").on("click", e => {
   performTransition(target);
 });
 
-// $("window").swipe( {
-//   //Generic swipe handler for all directions
-//   swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-//   alert(direction);
-//   // const scrollDirections;
-//   // if (direction === "up") {
-//   //   alert(direction);
-//   //   scroller.next();
-//   // } else {
-//   //   scrollToSection("prev");
-//   // }
-
-// }
-// });
 $("body").on('touchmove', (e) => {
   e.preventDefault();
 });
 if (isMobile) {
-  // alert("in is Mobil");
 
   $("body").swipe( {
     //Generic swipe handler for all directions
     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-    // alert(direction);
     const scrollToSection = scroller();
-    // // const scrollDirections = (direction === "up" ? "next" : "prev");
     if (direction == "up") {
       scrollToSection.next();
     } else {
       scrollToSection.prev();
     }
   
-    // scrollToSection(scrollDirections);
   }
   });
 }
