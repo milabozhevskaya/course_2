@@ -494,7 +494,7 @@ const display = $('.maincontent');
 let inScroll = false;
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
-console.log(isMobile);
+alert(isMobile);
 
 const performTransition = sectionEq => {
   if (inScroll) return;
