@@ -478,130 +478,130 @@ popupClose.addEventListener("click", function(e) {
 
 
 ///////////one page scroll
-var generateDats = function () {
+// var generateDats = function () {
 
-}
-const pages = $(".page");
-$(document).ready(() => {
-  $('.page').first().addClass('page--active')
-});
-const fixDat = $(".menu-fix__dat");
-$(document).ready(() => {
-  $('.menu-fix__dat').first().addClass('menu-fix__dat--active')
-});
+// }
+// const pages = $(".page");
+// $(document).ready(() => {
+//   $('.page').first().addClass('page--active')
+// });
+// const fixDat = $(".menu-fix__dat");
+// $(document).ready(() => {
+//   $('.menu-fix__dat').first().addClass('menu-fix__dat--active')
+// });
 
-const display = $('.maincontent');
-let inScroll = false;
-const md = new MobileDetect(window.navigator.userAgent);
-const isMobile = md.mobile();
-// alert(isMobile);
+// const display = $('.maincontent');
+// let inScroll = false;
+// const md = new MobileDetect(window.navigator.userAgent);
+// const isMobile = md.mobile();
+// // alert(isMobile);
 
-const performTransition = sectionEq => {
-  if (inScroll) return;
-    inScroll = true;
-    const transitionNext = 400;
+// const performTransition = sectionEq => {
+//   if (inScroll) return;
+//     inScroll = true;
+//     const transitionNext = 400;
 
-    const position = sectionEq * -100;
+//     const position = sectionEq * -100;
 
-  pages.eq(sectionEq).addClass('page--active').siblings().removeClass("page--active");
+//   pages.eq(sectionEq).addClass('page--active').siblings().removeClass("page--active");
 
 
-  display.css({
-    transform: `translateY(${position}%)`
-  });
+//   display.css({
+//     transform: `translateY(${position}%)`
+//   });
 
-  setTimeout(() => {
-    inScroll = false;
+//   setTimeout(() => {
+//     inScroll = false;
 
-    $('.menu-fix__dat--active').removeClass('menu-fix__dat--active');
-    fixDat.eq(sectionEq).addClass("menu-fix__dat--active");
-  }, transitionNext); 
-};
+//     $('.menu-fix__dat--active').removeClass('menu-fix__dat--active');
+//     fixDat.eq(sectionEq).addClass("menu-fix__dat--active");
+//   }, transitionNext); 
+// };
 
-const scroller = () => {
-  const activeSection = pages.filter('.page--active');
-  const nextSection = activeSection.next();
-  const prevSection = activeSection.prev();
+// const scroller = () => {
+//   const activeSection = pages.filter('.page--active');
+//   const nextSection = activeSection.next();
+//   const prevSection = activeSection.prev();
 
-  return {
-    next() {
-      if (nextSection.length) performTransition(nextSection.index());
-    },
-    prev() {
-      if (prevSection.length)  performTransition(prevSection.index());
-    }
-  };
+//   return {
+//     next() {
+//       if (nextSection.length) performTransition(nextSection.index());
+//     },
+//     prev() {
+//       if (prevSection.length)  performTransition(prevSection.index());
+//     }
+//   };
 
-};
+// };
 
-$(window).on("wheel", e => {
+// $(window).on("wheel", e => {
 
-  const deltaY = e.originalEvent.deltaY;
-  // console.log(deltaY);
-  const scrollToSection = scroller()
-  if (deltaY > 0) {
-    // console.log('next');
-    scrollToSection.next();
-  }
+//   const deltaY = e.originalEvent.deltaY;
+//   // console.log(deltaY);
+//   const scrollToSection = scroller()
+//   if (deltaY > 0) {
+//     // console.log('next');
+//     scrollToSection.next();
+//   }
 
-  if (deltaY < 0) {
-    scrollToSection.prev();
+//   if (deltaY < 0) {
+//     scrollToSection.prev();
 
-  }
-});
+//   }
+// });
 
-$(document).on('keydown', e => {
-  const tagName = e.target.tagName.toLowerCase();
-  const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
-  const windowScroller = scroller();
+// $(document).on('keydown', e => {
+//   const tagName = e.target.tagName.toLowerCase();
+//   const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
+//   const windowScroller = scroller();
   
-  if (userTypingInInputs) return;
-  switch(e.keyCode) {
-    case 38:
-      windowScroller.prev();
-      break;
-    case 40:
-      windowScroller.next();
-      break;
+//   if (userTypingInInputs) return;
+//   switch(e.keyCode) {
+//     case 38:
+//       windowScroller.prev();
+//       break;
+//     case 40:
+//       windowScroller.next();
+//       break;
 
-  };
-});
+//   };
+// });
 
-$("[data-scroll-to]").on("click", e => {
-  e.preventDefault();
-  const $this = $(e.currentTarget);
-  const target = $this.attr("data-scroll-to");
-  performTransition(target);
-});
+// $("[data-scroll-to]").on("click", e => {
+//   e.preventDefault();
+//   const $this = $(e.currentTarget);
+//   const target = $this.attr("data-scroll-to");
+//   performTransition(target);
+// });
 
-$("body").swipe( {
-  //Generic swipe handler for all directions
-  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-  alert(direction);
-  //   console.log(direction);
-  // const scrollDirections;
-  if (direction === "up") {
-    alert(direction);
-    scroller.next();
-  } else {
-    scrollToSection("prev");
-  }
+// $("body").swipe( {
+//   //Generic swipe handler for all directions
+//   swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+//   alert(direction);
+//   //   console.log(direction);
+//   // const scrollDirections;
+//   if (direction === "up") {
+//     alert(direction);
+//     scroller.next();
+//   } else {
+//     scrollToSection("prev");
+//   }
 
-}
-});
+// }
+// });
 
-if (isMobile) {
-  $("body").swipe( {
-    //Generic swipe handler for all directions
-    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-    // alert(direction);
-    //   console.log(direction);
-    const scrollDirections = (direction === "up" ? "next" : "prev");
+// if (isMobile) {
+//   $("body").swipe( {
+//     //Generic swipe handler for all directions
+//     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+//     // alert(direction);
+//     //   console.log(direction);
+//     const scrollDirections = (direction === "up" ? "next" : "prev");
   
-    scrollToSection(scrollDirections);
-  }
-  });
-}
+//     scrollToSection(scrollDirections);
+//   }
+//   });
+// }
 
 
 
