@@ -596,9 +596,14 @@ if (isMobile) {
     //Generic swipe handler for all directions
     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
     alert(direction);
-    const scrollDirections = (direction === "up" ? "next" : "prev");
+    // const scrollDirections = (direction === "up" ? "next" : "prev");
+    if (direction == "up") {
+      scroller.prev();
+    } else {
+      scroller.next();
+    }
   
-    scroller(scrollDirections);
+    // scroller(scrollDirections);
   }
   });
 }
