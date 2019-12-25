@@ -575,10 +575,10 @@ $("[data-scroll-to]").on("click", e => {
 if (isMobile) {
   $("body").swipe( {
     //Generic swipe handler for all directions
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-    const scrollToSections = direction === "up" ? "next" : "prev";
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+    const scrollDirections = (direction === "up" ? "next" : "prev");
   
-    scrollToSection(scrollToSections);
+    scrollToSection(scrollDirections);
   }
   });
 }
