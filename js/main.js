@@ -494,7 +494,7 @@ const display = $('.maincontent');
 let inScroll = false;
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
-alert(isMobile);
+// alert(isMobile);
 
 const performTransition = sectionEq => {
   if (inScroll) return;
@@ -581,9 +581,9 @@ $("body").swipe( {
   //   console.log(direction);
   // const scrollDirections;
   if (direction === "up") {
-    scrollToSection.next();
+    scrollToSection("next");
   } else {
-    scrollToSection.prev();
+    scrollToSection("prev");
   }
 
 }
