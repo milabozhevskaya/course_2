@@ -494,6 +494,7 @@ const display = $('.maincontent');
 let inScroll = false;
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
+console.log(isMobile);
 
 const performTransition = sectionEq => {
   if (inScroll) return;
@@ -576,6 +577,7 @@ if (isMobile) {
   $("body").swipe( {
     //Generic swipe handler for all directions
     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+      console.log(direction);
     const scrollDirections = (direction === "up" ? "next" : "prev");
   
     scrollToSection(scrollDirections);
@@ -639,7 +641,7 @@ function onPlayReady() {
   }, 1000);
 
   $('.player__duration-estimate').text(formatTime(durationSec));
-  console.log(durationSec);
+  // console.log(durationSec);
 };
 
 $('.player__splash').on('click', e => {
