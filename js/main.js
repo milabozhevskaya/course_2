@@ -572,33 +572,34 @@ $("[data-scroll-to]").on("click", e => {
   performTransition(target);
 });
 
-$("body").swipe( {
-  //Generic swipe handler for all directions
-  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-  alert(direction);
-  // const scrollDirections;
-  // if (direction === "up") {
-  //   alert(direction);
-  //   scroller.next();
-  // } else {
-  //   scrollToSection("prev");
-  // }
+// $("window").swipe( {
+//   //Generic swipe handler for all directions
+//   swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+//   alert(direction);
+//   // const scrollDirections;
+//   // if (direction === "up") {
+//   //   alert(direction);
+//   //   scroller.next();
+//   // } else {
+//   //   scrollToSection("prev");
+//   // }
 
-}
-});
-
-// if (isMobile) {
-//   $("body").swipe( {
-//     //Generic swipe handler for all directions
-//     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-//     alert(direction);
-//     //   console.log(direction);
-//     // const scrollDirections = (direction === "up" ? "next" : "prev");
-  
-//     // scrollToSection(scrollDirections);
-//   }
-//   });
 // }
+// });
+
+if (isMobile) {
+  alert("in is Mobil");
+
+  $("body").swipe( {
+    //Generic swipe handler for all directions
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+    alert(direction);
+    const scrollDirections = (direction === "up" ? "next" : "prev");
+  
+    scrollToSection(scrollDirections);
+  }
+  });
+}
 
 
 
