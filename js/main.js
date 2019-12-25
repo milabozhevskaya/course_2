@@ -579,9 +579,13 @@ $("body").swipe( {
   swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
   // alert(direction);
   //   console.log(direction);
-  const scrollDirections = (direction === "up" ? "next" : "prev");
+  // const scrollDirections;
+  if (direction === "up") {
+    scrollToSection.next();
+  } else {
+    scrollToSection.prev();
+  }
 
-  scrollToSection(scrollDirections);
 }
 });
 
