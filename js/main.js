@@ -1,4 +1,4 @@
-    ;(function () {    
+    ;    
     
     /////////section menu acko        
     const menu = document.querySelector(".menu");
@@ -586,9 +586,9 @@ $("[data-scroll-to]").on("click", e => {
 
 // }
 // });
-body.addEventListener('touchmove', (e) => {
-  e.preventDefault();
-});
+// body.addEventListener('touchmove', (e) => {
+//   e.preventDefault();
+// });
 if (isMobile) {
   alert("in is Mobil");
 
@@ -775,4 +775,9 @@ map.geoObjects.add(clusterer);
 clusterer.add(geoObjects);
 }
 
-    }) ()
+
+
+
+
+
+    
