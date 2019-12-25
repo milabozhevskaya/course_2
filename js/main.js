@@ -573,6 +573,18 @@ $("[data-scroll-to]").on("click", e => {
   const target = $this.attr("data-scroll-to");
   performTransition(target);
 });
+
+$("body").swipe( {
+  //Generic swipe handler for all directions
+  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+  alert(direction);
+  //   console.log(direction);
+  // const scrollDirections = (direction === "up" ? "next" : "prev");
+
+  // scrollToSection(scrollDirections);
+}
+});
+
 if (isMobile) {
   $("body").swipe( {
     //Generic swipe handler for all directions
