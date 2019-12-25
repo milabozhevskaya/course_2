@@ -40,6 +40,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgo": "^2.1.1",
     "gulp-uglify": "^3.0.2",
+    "jquery-touchswipe": "^1.6.19",
     "node-sass": "^4.13.0"
   },
   "dependencies": {
