@@ -590,18 +590,18 @@ $("body").on('touchmove', (e) => {
   e.preventDefault();
 });
 if (isMobile) {
-  alert("in is Mobil");
+  // alert("in is Mobil");
 
   $("body").swipe( {
     //Generic swipe handler for all directions
     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-    alert(direction);
+    // alert(direction);
     const scrollToSection = scroller();
     // // const scrollDirections = (direction === "up" ? "next" : "prev");
     if (direction == "up") {
-      scrollToSection.prev();
-    } else {
       scrollToSection.next();
+    } else {
+      scrollToSection.prev();
     }
   
     // scrollToSection(scrollDirections);
