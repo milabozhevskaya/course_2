@@ -586,9 +586,9 @@ $("[data-scroll-to]").on("click", e => {
 
 // }
 // });
-// body.addEventListener('touchmove', (e) => {
-//   e.preventDefault();
-// });
+$("body").on('touchmove', (e) => {
+  e.preventDefault();
+});
 if (isMobile) {
   alert("in is Mobil");
 
