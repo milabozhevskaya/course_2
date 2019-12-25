@@ -598,7 +598,7 @@ if (isMobile) {
     alert(direction);
     const scrollDirections = (direction === "up" ? "next" : "prev");
   
-    scrollToSection(scrollDirections);
+    scroller(scrollDirections);
   }
   });
 }
