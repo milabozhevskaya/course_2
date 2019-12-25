@@ -581,7 +581,8 @@ $("body").swipe( {
   //   console.log(direction);
   // const scrollDirections;
   if (direction === "up") {
-    scrollToSection("next");
+    alert(direction);
+    scroller.next();
   } else {
     scrollToSection("prev");
   }
