@@ -577,7 +577,7 @@ $("[data-scroll-to]").on("click", e => {
 $("body").swipe( {
   //Generic swipe handler for all directions
   swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-  // alert(direction);
+  alert(direction);
   //   console.log(direction);
   // const scrollDirections;
   if (direction === "up") {
