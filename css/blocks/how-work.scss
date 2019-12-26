@@ -1,0 +1,37 @@
+.how-work {
+  background-image: url('../img/bg/how-work.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.how-work__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.how-work__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.how-work__title{
+  align-items: center;
+  margin:0 auto;
+  margin-bottom: rem(50px);
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.controls {
+    background:#eee;
+    color:#333;
+    padding:0 5px;
+    font-size:12pt;
+    text-transform:uppercase;
+    width:50px;
+}

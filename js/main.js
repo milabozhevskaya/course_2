@@ -1,3 +1,5 @@
+    ;    
+    
     /////////section menu acko        
     const menu = document.querySelector(".menu");
     const menuItem = document.querySelectorAll('.menu__item');
@@ -62,7 +64,13 @@ const firstClose = document.querySelector('.first__close');
 function noScroll() {
   window.scrollTo(0, 0);
 }
-
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+  const target = $this.attr("data-scroll-to");
+  performTransition(target);
+  first.style.display = 'none';
+});
 
 hamburger.addEventListener('click', function(event) {
   event.preventDefault();
@@ -82,6 +90,7 @@ firstClose.addEventListener('click', function(event) {
 
   first.addEventListener('click', function(event) {
      event.preventDefault();
+     
   })
 })
 
@@ -463,3 +472,333 @@ popupClose.addEventListener("click", function(e) {
   document.body.style.overflow = "initial";
 });
 
+
+
+
+
+
+///////////one page scroll
+
+const pages = $(".page");
+$(document).ready(() => {
+  $('.page').first().addClass('page--active')
+});
+const fixDat = $(".menu-fix__dat");
+$(document).ready(() => {
+  $('.menu-fix__dat').first().addClass('menu-fix__dat--active')
+});
+
+const display = $('.maincontent');
+let inScroll = false;
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const performTransition = sectionEq => {
+  if (inScroll) return;
+    inScroll = true;
+    const transitionNext = 400;
+
+    const position = sectionEq * -100;
+
+  pages.eq(sectionEq).addClass('page--active').siblings().removeClass("page--active");
+
+
+  display.css({
+    transform: `translateY(${position}%)`
+  });
+
+  setTimeout(() => {
+    inScroll = false;
+
+    $('.menu-fix__dat--active').removeClass('menu-fix__dat--active');
+    fixDat.eq(sectionEq).addClass("menu-fix__dat--active");
+  }, transitionNext); 
+};
+
+const scroller = () => {
+  const activeSection = pages.filter('.page--active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  return {
+    next() {
+      if (nextSection.length) performTransition(nextSection.index());
+    },
+    prev() {
+      if (prevSection.length)  performTransition(prevSection.index());
+    }
+  };
+
+};
+
+$(window).on("wheel", e => {
+
+  const deltaY = e.originalEvent.deltaY;
+  const scrollToSection = scroller()
+  if (deltaY > 0) {
+    scrollToSection.next();
+  }
+
+  if (deltaY < 0) {
+    scrollToSection.prev();
+
+  }
+});
+
+$(document).on('keydown', e => {
+  const tagName = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
+  const windowScroller = scroller();
+  
+  if (userTypingInInputs) return;
+  switch(e.keyCode) {
+    case 38:
+      windowScroller.prev();
+      break;
+    case 40:
+      windowScroller.next();
+      break;
+
+  };
+});
+
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+  const target = $this.attr("data-scroll-to");
+  performTransition(target);
+});
+
+$("body").on('touchmove', (e) => {
+  e.preventDefault();
+});
+if (isMobile) {
+
+  $("body").swipe( {
+    //Generic swipe handler for all directions
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+    const scrollToSection = scroller();
+    if (direction == "up") {
+      scrollToSection.next();
+    } else {
+      scrollToSection.prev();
+    }
+  
+  }
+  });
+}
+
+
+
+
+/////////////////     PLAYER
+
+let player = document.getElementsByTagName('video')[0];
+
+let currentVolume = 0.1;
+player.volume = currentVolume;
+$('.player__start').on("click", e => {
+  const btn = $(e.currentTarget);
+  onPlayPause(btn);
+});
+
+$('#myvideo').on("click", e => {
+  const btn = $('.player__start');
+  onPlayPause(btn);
+});
+
+function onPlayPause(btn) {
+  if (btn.hasClass('paused')) {
+    player.pause();
+    btn.removeClass('paused');
+
+  } else {
+    player.play();
+    btn.addClass('paused');
+    $('.player__wrapper').addClass('active');
+  }
+}
+const formatTime = timeSec => {
+  const roundTime = Math.round(timeSec);
+  const minutes = Math.floor(roundTime / 60);
+  const seconds = roundTime - minutes *60;
+  const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+  return `${minutes}:${formattedSeconds}`;
+}
+if (player.readyState) {onPlayReady();};
+
+function onPlayReady() {
+  let interval;
+  let durationSec = player.duration;
+
+  if (typeof interval !== "undefined") {
+    clearInterval(interval);
+  }
+  interval = setInterval(() => {
+    const compleatedSec = player.currentTime;
+    const compleatedPersent = (compleatedSec / durationSec) * 100;
+    $('.player__playback-button').css({
+      left: `${compleatedPersent}%`
+    });
+
+    $('.player__duration-completed').text(formatTime(compleatedSec));
+
+  }, 1000);
+
+  $('.player__duration-estimate').text(formatTime(durationSec));
+  // console.log(durationSec);
+};
+
+$('.player__splash').on('click', e => {
+  player.play();
+  $('.player__start').addClass('paused');
+  $('.player__wrapper').addClass('active');
+});
+
+
+$('.player__playback').on('click', e => {
+  const bar = $(e.currentTarget);
+  const newButtonPosition = e.pageX - bar.offset().left;
+  const buttonPosPersent = (newButtonPosition / bar.width()) * 100;
+
+  const newPlayerTimeSec = (player.duration / 100) * buttonPosPersent;
+  // console.log(newPlayerTimeSec);
+
+  player.currentTime = newPlayerTimeSec;
+  $('.player__playback-button').css({
+    
+    left: `${buttonPosPersent}%`
+  });
+});
+
+$('.volume__start').on("click", e => {
+  const vol = $(e.currentTarget);
+  vol.toggleClass('no-active');
+  if (vol.hasClass('no-active')) {
+    player.volume = 0;
+  } else {
+    player.volume = currentVolume;
+  }
+});
+$('.volume__playback').on("click", e => {
+  const bar = $(e.currentTarget);
+  const volumeButtonPosition = e.pageY - bar.offset().top;
+  const buttonPosPersent = ((bar.height() - volumeButtonPosition) / bar.height()) * 100;
+  currentVolume = (1 / 100) * buttonPosPersent;
+  if (currentVolume>=0) {
+    player.volume = currentVolume;
+    if ($('.volume__start').hasClass('no-active')) {
+       $('.volume__start').removeClass('no-active')
+    }
+  } else {
+    currentVolume = 0;
+    player.volume = currentVolume;
+    $('.volume__start').addClass('no-active');
+  }
+  
+  $('.volume__playback-button').css( {
+    bottom: `${buttonPosPersent}%`
+  });
+})
+
+
+
+
+
+
+
+
+
+
+
+ymaps.ready(init);
+
+var placemarks = [
+  {
+    latitude: 59.97,
+    longitude: 30.31,
+    hintContent: '<div class="map__hint">ул.Литераторов, д. 19</div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      '<img class="map__burger-image" src="../img/content/burger.png" alt="Бургер"/>',
+      'Самые вкусные бургеры у нас! Заходите по адресу: ул.Литераторов, д.19',
+      '</div>'
+    ]
+  },
+  {
+    latitude: 59.94,
+    longitude: 30.25,
+    hintContent: '<div class="map__hint">Малый проспект В О, д.64</div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      '<img class="map__burger-image" src="../img/content/burger.png" alt="Бургер"/>',
+      'Самые вкусные бургеры у нас! Заходите по адресу: Малый проспект В О, д.64',
+      '</div>'
+    ]
+  },
+  {
+    latitude: 59.93,
+    longitude: 30.34,
+    hintContent: '<div class="map__hint">наб.реки Фонтанки, д.56</div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      '<img class="map__burger-image" src="../img/content/burger.png" alt="Бургер"/>',
+      'Самые вкусные бургеры у нас! Заходите по адресу: наб.реки Фонтанки, д.56',
+      '</div>'
+    ]
+  },
+  {
+    latitude: 59.94,
+    longitude: 30.46,
+    hintContent: '<div class="map__hint">наб.реки Фонтанки, д.56</div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      '<img class="map__burger-image" src="../img/content/burger.png" alt="Бургер"/>',
+      'Самые вкусные бургеры у нас! Заходите по адресу: наб.реки Фонтанки, д.56',
+      '</div>'
+    ]
+  }
+];
+var geoObjects = [];
+function init() {
+  var map = new ymaps.Map("map-yandex", {
+    center: [59.95, 30.32],
+    zoom: 12,
+    controls: ['zoomControl'],
+    behaviors: ['drag']
+  });
+
+  for (let i = 0; i < placemarks.length; i++) {
+    geoObjects[i] = new ymaps.Placemark ([placemarks[i].latitude, placemarks[i].longitude], {
+      hintContent: placemarks[i].hintContent,
+      balloonContent: placemarks[i].balloonContent.join('')
+    },
+    {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/icons/map-marker.svg',
+      iconImageSize: [46,58],
+      iconImageOffset: [-23, -58],
+    });
+   
+  }
+var clusterer = new ymaps.Clusterer ({
+  clusterIcons: [
+    {
+      href: 'img/content/burger.png',
+      size: [100, 100],
+      offset: [-50, -50]
+    }
+  ],
+  clusterIconContentLayout: null
+});
+map.geoObjects.add(clusterer);
+// map.geoObjects.add(placemark);
+clusterer.add(geoObjects);
+}
+
+
+
+
+
+
+    
