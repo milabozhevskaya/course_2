@@ -594,7 +594,9 @@ if (isMobile) {
 /////////////////     PLAYER
 
 let player = document.getElementsByTagName('video')[0];
-player.volume = 0.1;
+
+let currentVolume = 0.1;
+player.volume = currentVolume;
 $('.player__start').on("click", e => {
   const btn = $(e.currentTarget);
   onPlayPause(btn);
@@ -660,7 +662,7 @@ $('.player__playback').on('click', e => {
   const buttonPosPersent = (newButtonPosition / bar.width()) * 100;
 
   const newPlayerTimeSec = (player.duration / 100) * buttonPosPersent;
-  console.log(newPlayerTimeSec);
+  // console.log(newPlayerTimeSec);
 
   player.currentTime = newPlayerTimeSec;
   $('.player__playback-button').css({
@@ -668,6 +670,46 @@ $('.player__playback').on('click', e => {
     left: `${buttonPosPersent}%`
   });
 });
+
+$('.volume__start').on("click", e => {
+  const vol = $(e.currentTarget);
+  vol.toggleClass('no-active');
+  if (vol.hasClass('no-active')) {
+    player.volume = 0;
+  } else {
+    player.volume = currentVolume;
+  }
+});
+$('.volume__playback').on("click", e => {
+  const bar = $(e.currentTarget);
+  const volumeButtonPosition = e.pageY - bar.offset().top;
+  const buttonPosPersent = ((bar.height() - volumeButtonPosition) / bar.height()) * 100;
+  currentVolume = (1 / 100) * buttonPosPersent;
+  if (currentVolume>=0) {
+    player.volume = currentVolume;
+    if ($('.volume__start').hasClass('no-active')) {
+       $('.volume__start').removeClass('no-active')
+    }
+  } else {
+    currentVolume = 0;
+    player.volume = currentVolume;
+    $('.volume__start').addClass('no-active');
+  }
+  
+  $('.volume__playback-button').css( {
+    bottom: `${buttonPosPersent}%`
+  });
+})
+
+
+
+
+
+
+
+
+
+
 
 ymaps.ready(init);
 
